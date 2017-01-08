@@ -642,6 +642,13 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "HLT":
+                    hexTxtArea.append("CF/EF (Depends on kit VI/ESA)\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
                 default:
                     i--;
                     hexTxtArea.append("Unknown Instrucion!\n");
