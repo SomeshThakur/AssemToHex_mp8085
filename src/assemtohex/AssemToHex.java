@@ -367,20 +367,17 @@ public class AssemToHex extends javax.swing.JFrame {
                     if ("A,E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("7B\n");
                     }
-                    if ("A,F".equals(wordsArray[i + 1])) {
+                    if ("A,H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("7C\n");
                     }
-                    if ("A,H".equals(wordsArray[i + 1])) {
+                    if ("A,L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("7D\n");
                     }
-                    if ("A,L".equals(wordsArray[i + 1])) {
+                    if ("A,M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("7E\n");
                     }
-                    if ("A,M".equals(wordsArray[i + 1])) {
-                        hexTxtArea.append("7F\n");
-                    }
                     if ("A,A".equals(wordsArray[i + 1])) {
-                        hexTxtArea.append("80\n");
+                        hexTxtArea.append("7F\n");
                     }
                     break;
             }
