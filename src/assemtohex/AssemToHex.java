@@ -8,6 +8,7 @@ package assemtohex;
 import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.text.BadLocationException;
 
@@ -617,27 +618,39 @@ public class AssemToHex extends javax.swing.JFrame {
                     break;
 
                 case "LXI":
-                    if (wordsArray[i + 1].startsWith("B,")) {
-                        hexTxtArea.append("01 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                    boolean lxiaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(2, wordsArray[i + 1].length() - 1));
+                    if (lxiaddr) {
+                        if (wordsArray[i + 1].startsWith("B,")) {
+                            hexTxtArea.append("01 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("D,")) {
+                            hexTxtArea.append("11 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("H,")) {
+                            hexTxtArea.append("21 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("SP,")) {
+                            hexTxtArea.append("31 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
                         correctFormatInstruction = true;
+                        lxiaddr = true;
                     }
-                    if (wordsArray[i + 1].startsWith("D,")) {
-                        hexTxtArea.append("11 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
-                        correctFormatInstruction = true;
-                    }
-                    if (wordsArray[i + 1].startsWith("H,")) {
-                        hexTxtArea.append("21 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
-                        correctFormatInstruction = true;
-                    }
-                    if (wordsArray[i + 1].startsWith("SP,")) {
-                        hexTxtArea.append("31 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
-                        correctFormatInstruction = true;
-                    }
-
                     break;
 
                 case "LDA":
-                    hexTxtArea.append("3A " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    boolean ldaaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (ldaaddr) {
+                        hexTxtArea.append("3A " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        ldaaddr = true;
+                    }
                     correctFormatInstruction = true;
 
                     break;
@@ -655,7 +668,19 @@ public class AssemToHex extends javax.swing.JFrame {
                     i--;
 
                     break;
-                    
+
+                case "STA":
+                    boolean staaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (staaddr) {
+                        hexTxtArea.append("32 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        staaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
                 default:
                     i--;
                     hexTxtArea.append("Unknown Instrucion!\n");
