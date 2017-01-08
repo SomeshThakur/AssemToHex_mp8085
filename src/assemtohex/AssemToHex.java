@@ -683,7 +683,7 @@ public class AssemToHex extends javax.swing.JFrame {
 
                 default:
                     i--;
-                    hexTxtArea.append("Unknown Instrucion!\n");
+                    hexTxtArea.append("Unknown Instruction!\n");
                     correctFormatInstruction = true;
             }
             if (!correctFormatInstruction) {
