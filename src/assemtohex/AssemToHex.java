@@ -701,7 +701,7 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
-                    case "ANA":
+                case "ANA":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("A0\n");
                         correctFormatInstruction = true;
@@ -736,8 +736,8 @@ public class AssemToHex extends javax.swing.JFrame {
                     }
 
                     break;
-                    
-                    case "XRA":
+
+                case "XRA":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("A8\n");
                         correctFormatInstruction = true;
@@ -772,8 +772,8 @@ public class AssemToHex extends javax.swing.JFrame {
                     }
 
                     break;
-                    
-                    case "ORA":
+
+                case "ORA":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("B0\n");
                         correctFormatInstruction = true;
@@ -808,7 +808,43 @@ public class AssemToHex extends javax.swing.JFrame {
                     }
 
                     break;
-                    
+
+                case "CMP":
+                    if ("B".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("B8\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("C".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("B9\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("D".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("BA\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("E".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("BB\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("H".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("BC\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("L".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("BD\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("M".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("BE\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("A".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("BF\n");
+                        correctFormatInstruction = true;
+                    }
+
+                    break;
+
                 default:
                     i--;
                     hexTxtArea.append("Unknown Instruction!\n");
