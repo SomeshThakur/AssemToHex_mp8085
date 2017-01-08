@@ -209,333 +209,446 @@ public class AssemToHex extends javax.swing.JFrame {
     private void convertToHex() throws BadLocationException {
         hexTxtArea.setText("");
         String[] wordsArray = assemTxtArea.getText().split("\\s+");
+        boolean correctFormatInstruction;
         for (int i = 0; i < wordsArray.length; i += 2) {
+            correctFormatInstruction = false;
             switch (wordsArray[i]) {
                 case "MOV":
                     if ("B,B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append(" 40\n");
+                        correctFormatInstruction = true;
                     }
                     if ("B,C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("41\n");
+                        correctFormatInstruction = true;
                     }
                     if ("B,D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("42\n");
+                        correctFormatInstruction = true;
                     }
                     if ("B,E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("43\n");
+                        correctFormatInstruction = true;
                     }
                     if ("B,H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("44\n");
+                        correctFormatInstruction = true;
                     }
                     if ("B,L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("45\n");
+                        correctFormatInstruction = true;
                     }
                     if ("B,M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("46\n");
+                        correctFormatInstruction = true;
                     }
                     if ("B,A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("47\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C,B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("48\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C,C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("49\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C,D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("4A\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C,E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("4B\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C,H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("4C\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C,L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("4D\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C,M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("4E\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C,A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("4F\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D,B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("50\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D,C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("51\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D,D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("52\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D,E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("53\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D,H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("54\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D,L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("55\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D,M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("56\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D,A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("57\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E,B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("58\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E,C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("59\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E,D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("5A\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E,E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("5B\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E,H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("5C\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E,L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("5D\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E,M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("5E\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E,A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("5F\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H,B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("60\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H,C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("61\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H,D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("62\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H,E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("63\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H,H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("64\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H,L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("65\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H,M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("66\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H,A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("67\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L,B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("68\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L,C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("69\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L,D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("6A\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L,E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("6B\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L,H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("6C\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L,L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("6D\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L,M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("6E\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L,A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("6F\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M,B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("70\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M,C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("71\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M,D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("72\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M,E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("73\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M,H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("74\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M,L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("75\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M,M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("76\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M,A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("77\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A,B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("78\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A,C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("79\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A,D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("7A\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A,E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("7B\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A,H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("7C\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A,L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("7D\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A,M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("7E\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A,A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("7F\n");
+                        correctFormatInstruction = true;
                     }
                     break;
 
                 case "ADD":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("80\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("81\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("82\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("83\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("84\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("85\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("86\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("87\n");
+                        correctFormatInstruction = true;
                     }
+
                     break;
 
                 case "ADC":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("88\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("89\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("8A\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("8B\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("8C\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("8D\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("8E\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("8F\n");
+                        correctFormatInstruction = true;
                     }
+
                     break;
 
                 case "SUB":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("90\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("91\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("92\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("93\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("94\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("95\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("96\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("97\n");
+                        correctFormatInstruction = true;
                     }
+
                     break;
 
                 case "SBB":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("98\n");
+                        correctFormatInstruction = true;
                     }
                     if ("C".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("99\n");
+                        correctFormatInstruction = true;
                     }
                     if ("D".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("9A\n");
+                        correctFormatInstruction = true;
                     }
                     if ("E".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("9B\n");
+                        correctFormatInstruction = true;
                     }
                     if ("H".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("9C\n");
+                        correctFormatInstruction = true;
                     }
                     if ("L".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("9D\n");
+                        correctFormatInstruction = true;
                     }
                     if ("M".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("9E\n");
+                        correctFormatInstruction = true;
                     }
                     if ("A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("9F\n");
+                        correctFormatInstruction = true;
                     }
+
                     break;
 
                 case "LXI":
                     if (wordsArray[i + 1].startsWith("B,")) {
                         hexTxtArea.append("01 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                        correctFormatInstruction = true;
                     }
                     if (wordsArray[i + 1].startsWith("D,")) {
                         hexTxtArea.append("11 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                        correctFormatInstruction = true;
                     }
                     if (wordsArray[i + 1].startsWith("H,")) {
                         hexTxtArea.append("21 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                        correctFormatInstruction = true;
                     }
                     if (wordsArray[i + 1].startsWith("SP,")) {
                         hexTxtArea.append("31 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                        correctFormatInstruction = true;
                     }
+
                     break;
 
                 case "LDA":
                     hexTxtArea.append("3A " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    correctFormatInstruction = true;
+
                     break;
 
                 default:
                     i--;
                     hexTxtArea.append("Unknown Instrucion!\n");
+                    correctFormatInstruction = true;
+            }
+            if (!correctFormatInstruction) {
+                hexTxtArea.append("Instruction Format is wrong!\n");
             }
         }
     }
