@@ -513,6 +513,21 @@ public class AssemToHex extends javax.swing.JFrame {
                         hexTxtArea.append("9F\n");
                     }
                     break;
+
+                case "LXI":
+                    if (wordsArray[i + 1].startsWith("B,")) {
+                        hexTxtArea.append("01 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                    }
+                    if (wordsArray[i + 1].startsWith("D,")) {
+                        hexTxtArea.append("11 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                    }
+                    if (wordsArray[i + 1].startsWith("H,")) {
+                        hexTxtArea.append("21 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                    }
+                    if (wordsArray[i + 1].startsWith("SP,")) {
+                        hexTxtArea.append("31 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                    }
+                    break;
             }
         }
     }
