@@ -642,7 +642,7 @@ public class AssemToHex extends javax.swing.JFrame {
                         lxiaddr = true;
                     }
                     break;
- 
+
                 case "MVI":
                     boolean mviaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(2, wordsArray[i + 1].length() - 1));
                     if (mviaddr) {
@@ -931,6 +931,42 @@ public class AssemToHex extends javax.swing.JFrame {
                     }
                     if ("A".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("BF\n");
+                        correctFormatInstruction = true;
+                    }
+
+                    break;
+
+                case "INR":
+                    if ("B".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("04\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("C".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("0C\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("D".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("14\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("E".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("1C\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("H".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("24\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("L".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("2C\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("M".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("34\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("A".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("3C\n");
                         correctFormatInstruction = true;
                     }
 
