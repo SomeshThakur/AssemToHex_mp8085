@@ -845,6 +845,18 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "JNC":
+                    boolean jncaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (jncaddr) {
+                        hexTxtArea.append("3A " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        jncaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
                 default:
                     i--;
                     hexTxtArea.append("Unknown Instruction!\n");
