@@ -649,6 +649,13 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "NOP":
+                    hexTxtArea.append("00\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+                    
                 default:
                     i--;
                     hexTxtArea.append("Unknown Instrucion!\n");
