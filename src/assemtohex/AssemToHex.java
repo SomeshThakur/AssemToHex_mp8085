@@ -799,11 +799,11 @@ public class AssemToHex extends javax.swing.JFrame {
                         correctFormatInstruction = true;
                     }
                     if ("M".equals(wordsArray[i + 1])) {
-                        hexTxtArea.append("B7\n");
+                        hexTxtArea.append("B6\n");
                         correctFormatInstruction = true;
                     }
                     if ("A".equals(wordsArray[i + 1])) {
-                        hexTxtArea.append("B8\n");
+                        hexTxtArea.append("B7\n");
                         correctFormatInstruction = true;
                     }
 
