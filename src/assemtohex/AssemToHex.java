@@ -675,6 +675,13 @@ public class AssemToHex extends javax.swing.JFrame {
                     i--;
 
                     break;
+                    
+                case "CMC":
+                    hexTxtArea.append("3F\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
 
                 case "STA":
                     boolean staaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
