@@ -42,6 +42,7 @@ public class AssemToHex extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Assembly to Machine Code (HEX) 8085MP");
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Assembly Code :");
@@ -53,8 +54,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
         assemTxtArea.setColumns(20);
         assemTxtArea.setLineWrap(true);
-	assemTxtArea.setRows(5);
-	assemTxtArea.addKeyListener(new java.awt.event.KeyAdapter() {
+        assemTxtArea.setRows(5);
+        assemTxtArea.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 assemTxtAreaKeyTyped(evt);
             }
@@ -113,6 +114,7 @@ public class AssemToHex extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void assemTxtAreaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_assemTxtAreaKeyTyped
@@ -142,7 +144,7 @@ public class AssemToHex extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
 
