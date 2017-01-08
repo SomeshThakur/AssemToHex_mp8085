@@ -647,35 +647,35 @@ public class AssemToHex extends javax.swing.JFrame {
                     boolean mviaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(2, wordsArray[i + 1].length() - 1));
                     if (mviaddr) {
                         if (wordsArray[i + 1].startsWith("B,")) {
-                            hexTxtArea.append("06 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            hexTxtArea.append("06 " + wordsArray[i + 1].substring(2,4)+"\n");
                             correctFormatInstruction = true;
                         }
                         if (wordsArray[i + 1].startsWith("C,")) {
-                            hexTxtArea.append("0E " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            hexTxtArea.append("0E " + wordsArray[i + 1].substring(2,4)+ "\n");
                             correctFormatInstruction = true;
                         }
                         if (wordsArray[i + 1].startsWith("D,")) {
-                            hexTxtArea.append("16 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            hexTxtArea.append("16 " +  wordsArray[i + 1].substring(2,4)+ "\n");
                             correctFormatInstruction = true;
                         }
                         if (wordsArray[i + 1].startsWith("E,")) {
-                            hexTxtArea.append("1E " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            hexTxtArea.append("1E " +  wordsArray[i + 1].substring(2,4)+ "\n");
                             correctFormatInstruction = true;
                         }
                         if (wordsArray[i + 1].startsWith("H,")) {
-                            hexTxtArea.append("26 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            hexTxtArea.append("26 " +  wordsArray[i + 1].substring(2,4) + "\n");
                             correctFormatInstruction = true;
                         }
                         if (wordsArray[i + 1].startsWith("L,")) {
-                            hexTxtArea.append("2E " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            hexTxtArea.append("2E " + wordsArray[i + 1].substring(2,4)+ "\n");
                             correctFormatInstruction = true;
                         }
                         if (wordsArray[i + 1].startsWith("M,")) {
-                            hexTxtArea.append("36 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            hexTxtArea.append("36 " +  wordsArray[i + 1].substring(2,4)+ "\n");
                             correctFormatInstruction = true;
                         }
                         if (wordsArray[i + 1].startsWith("A,")) {
-                            hexTxtArea.append("3E " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            hexTxtArea.append("3E " +  wordsArray[i + 1].substring(2,4)+ "\n");
                             correctFormatInstruction = true;
                         }
                     } else {
@@ -775,7 +775,7 @@ public class AssemToHex extends javax.swing.JFrame {
                 case "ADI":
                     boolean adidata = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
                     if (adidata) {
-                        hexTxtArea.append("C6 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                        hexTxtArea.append("C6 " + wordsArray[i + 1].substring(0,2)+ "\n");
                     } else {
                         hexTxtArea.append("Invalid Address\n");
                         adidata = true;
