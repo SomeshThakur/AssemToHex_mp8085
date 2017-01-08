@@ -772,6 +772,18 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "ADI":
+                    boolean adidata = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (adidata) {
+                        hexTxtArea.append("C6 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        adidata = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
                 case "INX":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("03\n");
