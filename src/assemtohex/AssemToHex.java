@@ -528,6 +528,10 @@ public class AssemToHex extends javax.swing.JFrame {
                         hexTxtArea.append("31 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
                     }
                     break;
+
+                case "LDA":
+                    hexTxtArea.append("3A " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    break;
             }
         }
     }
