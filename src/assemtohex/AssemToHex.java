@@ -209,7 +209,7 @@ public class AssemToHex extends javax.swing.JFrame {
     private void convertToHex() throws BadLocationException {
         hexTxtArea.setText("");
         String[] wordsArray = assemTxtArea.getText().split("\\s+");
-        for (int i = 0; i < wordsArray.length; i++) {
+        for (int i = 0; i < wordsArray.length; i += 2) {
             switch (wordsArray[i]) {
                 case "MOV":
                     if ("B,B".equals(wordsArray[i + 1])) {
@@ -532,6 +532,10 @@ public class AssemToHex extends javax.swing.JFrame {
                 case "LDA":
                     hexTxtArea.append("3A " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
                     break;
+
+                default:
+                    i--;
+                    hexTxtArea.append("Unknown Instrucion!\n");
             }
         }
     }
