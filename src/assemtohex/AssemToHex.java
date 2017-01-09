@@ -626,195 +626,6 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
-                case "LXI":
-                    boolean lxiaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(2, wordsArray[i + 1].length() - 1));
-                    if ((wordsArray[i + 1].length() <= 6 && wordsArray[i + 1].endsWith("H")) || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() >= 8 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 6 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 6) {
-                        hexTxtArea.append("Invalid Address!\n");
-                        correctFormatInstruction = true;
-                    } else if (lxiaddr) {
-                        if (wordsArray[i + 1].startsWith("B,")) {
-                            hexTxtArea.append("01 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                        if (wordsArray[i + 1].startsWith("D,")) {
-                            hexTxtArea.append("11 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                        if (wordsArray[i + 1].startsWith("H,")) {
-                            hexTxtArea.append("21 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                        if (wordsArray[i + 1].startsWith("SP,")) {
-                            hexTxtArea.append("31 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                    } else {
-                        hexTxtArea.append("Invalid Address\n");
-                        correctFormatInstruction = true;
-                        lxiaddr = true;
-                    }
-                    break;
-
-                case "MVI":
-                    boolean mvidata = Pattern.matches("\\d*", wordsArray[i + 1].substring(2, wordsArray[i + 1].length() - 1));
-                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 4 || wordsArray[i + 1].length() < 4) {
-                        hexTxtArea.append("Invalid Data\n");
-                        correctFormatInstruction = true;
-                    } else if (mvidata) {
-                        if (wordsArray[i + 1].startsWith("B,")) {
-                            hexTxtArea.append("06 " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                        if (wordsArray[i + 1].startsWith("C,")) {
-                            hexTxtArea.append("0E " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                        if (wordsArray[i + 1].startsWith("D,")) {
-                            hexTxtArea.append("16 " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                        if (wordsArray[i + 1].startsWith("E,")) {
-                            hexTxtArea.append("1E " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                        if (wordsArray[i + 1].startsWith("H,")) {
-                            hexTxtArea.append("26 " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                        if (wordsArray[i + 1].startsWith("L,")) {
-                            hexTxtArea.append("2E " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                        if (wordsArray[i + 1].startsWith("M,")) {
-                            hexTxtArea.append("36 " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                        if (wordsArray[i + 1].startsWith("A,")) {
-                            hexTxtArea.append("3E " + wordsArray[i + 1].substring(2, 4) + "\n");
-                            correctFormatInstruction = true;
-                        }
-                    } else {
-                        hexTxtArea.append("Invalid data!\n");
-                        correctFormatInstruction = true;
-                        mvidata = true;
-                    }
-                    break;
-
-                case "LDA":
-                    boolean ldaaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
-                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <= 4) {
-                        hexTxtArea.append("Invalid Address!\n");
-                        correctFormatInstruction = true;
-                    } else if (ldaaddr) {
-                        hexTxtArea.append("3A " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
-                    } else {
-                        hexTxtArea.append("Invalid Address\n");
-                        ldaaddr = true;
-                    }
-                    correctFormatInstruction = true;
-
-                    break;
-
-                case "HLT":
-                    hexTxtArea.append("CF/EF (Depends on kit VI/ESA)\n");
-                    correctFormatInstruction = true;
-                    i--;
-
-                    break;
-
-                case "NOP":
-                    hexTxtArea.append("00\n");
-                    correctFormatInstruction = true;
-                    i--;
-
-                    break;
-
-                case "CMA":
-                    hexTxtArea.append("2F\n");
-                    correctFormatInstruction = true;
-                    i--;
-
-                    break;
-
-                case "CMC":
-                    hexTxtArea.append("3F\n");
-                    correctFormatInstruction = true;
-                    i--;
-
-                    break;
-
-                case "STC":
-                    hexTxtArea.append("37\n");
-                    correctFormatInstruction = true;
-                    i--;
-
-                    break;
-
-                case "RAR":
-                    hexTxtArea.append("1F\n");
-                    correctFormatInstruction = true;
-                    i--;
-
-                    break;
-
-                case "RRC":
-                    hexTxtArea.append("0F\n");
-                    correctFormatInstruction = true;
-                    i--;
-
-                    break;
-
-                case "RLC":
-                    hexTxtArea.append("07\n");
-                    correctFormatInstruction = true;
-                    i--;
-
-                    break;
-
-                case "RAL":
-                    hexTxtArea.append("17\n");
-                    correctFormatInstruction = true;
-                    i--;
-
-                    break;
-
-                case "DAA":
-                    hexTxtArea.append("27\n");
-                    correctFormatInstruction = true;
-                    i--;
-
-                    break;
-
-                case "STA":
-                    boolean staaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
-                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <= 4) {
-                        hexTxtArea.append("Invalid Address!\n");
-                        correctFormatInstruction = true;
-                    } else if (staaddr) {
-                        hexTxtArea.append("32 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
-                    } else {
-                        hexTxtArea.append("Invalid Address\n");
-                        staaddr = true;
-                    }
-                    correctFormatInstruction = true;
-
-                    break;
-
-                case "ADI":
-                    boolean adidata = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
-                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 3 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() < 3 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >2 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <2) {
-                        hexTxtArea.append("Invalid Data!\n");
-                        correctFormatInstruction = true;
-                    } else if (adidata) {
-                        hexTxtArea.append("C6 " + wordsArray[i + 1].substring(0, 2) + "\n");
-                    } else {
-                        hexTxtArea.append("Invalid Data\n");
-                        adidata = true;
-                    }
-                    correctFormatInstruction = true;
-
-                    break;
-
                 case "INX":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("03\n");
@@ -1012,6 +823,195 @@ public class AssemToHex extends javax.swing.JFrame {
                         hexTxtArea.append("3C\n");
                         correctFormatInstruction = true;
                     }
+
+                    break;
+
+                case "LXI":
+                    boolean lxiaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(2, wordsArray[i + 1].length() - 1));
+                    if ((wordsArray[i + 1].length() <= 6 && wordsArray[i + 1].endsWith("H")) || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() >= 8 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 6 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 6) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (lxiaddr) {
+                        if (wordsArray[i + 1].startsWith("B,")) {
+                            hexTxtArea.append("01 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("D,")) {
+                            hexTxtArea.append("11 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("H,")) {
+                            hexTxtArea.append("21 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("SP,")) {
+                            hexTxtArea.append("31 " + wordsArray[i + 1].substring(4, 6) + " " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        correctFormatInstruction = true;
+                        lxiaddr = true;
+                    }
+                    break;
+
+                case "MVI":
+                    boolean mvidata = Pattern.matches("\\d*", wordsArray[i + 1].substring(2, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 4 || wordsArray[i + 1].length() < 4) {
+                        hexTxtArea.append("Invalid Data\n");
+                        correctFormatInstruction = true;
+                    } else if (mvidata) {
+                        if (wordsArray[i + 1].startsWith("B,")) {
+                            hexTxtArea.append("06 " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("C,")) {
+                            hexTxtArea.append("0E " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("D,")) {
+                            hexTxtArea.append("16 " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("E,")) {
+                            hexTxtArea.append("1E " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("H,")) {
+                            hexTxtArea.append("26 " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("L,")) {
+                            hexTxtArea.append("2E " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("M,")) {
+                            hexTxtArea.append("36 " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if (wordsArray[i + 1].startsWith("A,")) {
+                            hexTxtArea.append("3E " + wordsArray[i + 1].substring(2, 4) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                    } else {
+                        hexTxtArea.append("Invalid data!\n");
+                        correctFormatInstruction = true;
+                        mvidata = true;
+                    }
+                    break;
+
+                case "HLT":
+                    hexTxtArea.append("CF/EF (Depends on kit VI/ESA)\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "NOP":
+                    hexTxtArea.append("00\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "CMA":
+                    hexTxtArea.append("2F\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "CMC":
+                    hexTxtArea.append("3F\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "STC":
+                    hexTxtArea.append("37\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "RAR":
+                    hexTxtArea.append("1F\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "RRC":
+                    hexTxtArea.append("0F\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "RLC":
+                    hexTxtArea.append("07\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "RAL":
+                    hexTxtArea.append("17\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "DAA":
+                    hexTxtArea.append("27\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "STA":
+                    boolean staaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <= 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (staaddr) {
+                        hexTxtArea.append("32 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        staaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "ADI":
+                    boolean adidata = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 3 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() < 3 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 2 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 2) {
+                        hexTxtArea.append("Invalid Data!\n");
+                        correctFormatInstruction = true;
+                    } else if (adidata) {
+                        hexTxtArea.append("C6 " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Data\n");
+                        adidata = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "LDA":
+                    boolean ldaaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <= 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (ldaaddr) {
+                        hexTxtArea.append("3A " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        ldaaddr = true;
+                    }
+                    correctFormatInstruction = true;
 
                     break;
 
