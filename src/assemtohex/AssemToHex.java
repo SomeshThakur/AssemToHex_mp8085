@@ -619,7 +619,7 @@ public class AssemToHex extends javax.swing.JFrame {
 
                 case "LXI":
                     boolean lxiaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(2, wordsArray[i + 1].length() - 1));
-                    if ((wordsArray[i + 1].length() <= 6 && wordsArray[i + 1].endsWith("H")) || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() >= 8) {
+                    if ((wordsArray[i + 1].length() <= 6 && wordsArray[i + 1].endsWith("H")) || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() >= 8 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 6 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 6) {
                         hexTxtArea.append("Invalid Address!\n");
                         correctFormatInstruction = true;
                     } else if (lxiaddr) {
@@ -1005,7 +1005,10 @@ public class AssemToHex extends javax.swing.JFrame {
 
                 case "JNC":
                     boolean jncaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
-                    if (jncaddr && wordsArray[i + 1].length() >= 4) {
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <= 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (jncaddr) {
                         hexTxtArea.append("D2 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
                     } else {
                         hexTxtArea.append("Invalid Address\n");
@@ -1017,7 +1020,10 @@ public class AssemToHex extends javax.swing.JFrame {
 
                 case "JNZ":
                     boolean jnzaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
-                    if (jnzaddr) {
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <= 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (jnzaddr) {
                         hexTxtArea.append("C2 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
                     } else {
                         hexTxtArea.append("Invalid Address\n");
@@ -1029,7 +1035,10 @@ public class AssemToHex extends javax.swing.JFrame {
 
                 case "JMP":
                     boolean jmpaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
-                    if (jmpaddr) {
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <= 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (jmpaddr) {
                         hexTxtArea.append("C3 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
                     } else {
                         hexTxtArea.append("Invalid Address\n");
