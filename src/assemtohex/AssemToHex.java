@@ -675,9 +675,9 @@ public class AssemToHex extends javax.swing.JFrame {
                         hexTxtArea.append("12\n");
                         correctFormatInstruction = true;
                     }
-                    
+
                     break;
-                    
+
                 case "LDAX":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("0A\n");
@@ -687,9 +687,9 @@ public class AssemToHex extends javax.swing.JFrame {
                         hexTxtArea.append("1A\n");
                         correctFormatInstruction = true;
                     }
-                    
+
                     break;
-                    
+
                 case "ANA":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("A0\n");
