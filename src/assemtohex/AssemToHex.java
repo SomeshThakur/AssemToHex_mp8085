@@ -678,6 +678,18 @@ public class AssemToHex extends javax.swing.JFrame {
                     
                     break;
                     
+                case "LDAX":
+                    if ("B".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("0A\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("D".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("1A\n");
+                        correctFormatInstruction = true;
+                    }
+                    
+                    break;
+                    
                 case "ANA":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("A0\n");
