@@ -646,6 +646,26 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "DCX":
+                    if ("B".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("0B\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("D".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("1B\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("H".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("2B\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("SP".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("3B\n");
+                        correctFormatInstruction = true;
+                    }
+
+                    break;
+
                 case "ANA":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("A0\n");
