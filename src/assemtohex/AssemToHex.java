@@ -666,6 +666,18 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "STAX":
+                    if ("B".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("02\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("D".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("12\n");
+                        correctFormatInstruction = true;
+                    }
+                    
+                    break;
+                    
                 case "ANA":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("A0\n");
