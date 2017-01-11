@@ -5,6 +5,7 @@
  */
 package assemtohex;
 
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -49,6 +50,7 @@ public class AssemToHex extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Assembly to Machine Code (HEX) 8085MP");
+        setIconImage(Toolkit.getDefaultToolkit().getImage(AssemToHex.class.getResource("icon.png")));
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
