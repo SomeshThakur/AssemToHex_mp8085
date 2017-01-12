@@ -1113,6 +1113,27 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "SPHL":
+                    hexTxtArea.append("F9\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "XTHL":
+                    hexTxtArea.append("E3\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "XCHG":
+                    hexTxtArea.append("EB\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
                 case "OUT":
                     hexTxtArea.append("D3 " + wordsArray[i + 1].substring(0, 2) + "\n");
                     correctFormatInstruction = true;
