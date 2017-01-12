@@ -1185,6 +1185,51 @@ public class AssemToHex extends javax.swing.JFrame {
                     correctFormatInstruction = true;
 
                     break;
+                
+                case "JPO":
+                    boolean jpoaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <= 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (jpoaddr) {
+                        hexTxtArea.append("E2 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        jpoaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+                    
+                case "JPE":
+                    boolean jpeaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <= 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (jpeaddr) {
+                        hexTxtArea.append("EA " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        jpeaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+ 
+                case "JP":
+                    boolean jpaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <= 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (jpaddr) {
+                        hexTxtArea.append("F2 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        jpaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
 
                 case "JMP":
                     boolean jmpaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
