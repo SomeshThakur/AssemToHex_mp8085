@@ -1184,6 +1184,13 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "EI":
+                    hexTxtArea.append("FB\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
                 case "OUT":
                     hexTxtArea.append("D3 " + wordsArray[i + 1].substring(0, 2) + "\n");
                     correctFormatInstruction = true;
