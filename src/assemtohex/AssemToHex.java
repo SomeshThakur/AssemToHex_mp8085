@@ -962,6 +962,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "RST":
+                    if ("0".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("C7\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("1".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("CF\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("2".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("D7\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("3".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("DF\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("4".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("E7\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("5".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("EF\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("6".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("F7\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("7".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("FF\n");
+                        correctFormatInstruction = true;
+                    }
+
+                    break;
+
                 case "LXI":
                     boolean lxiaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(2, wordsArray[i + 1].length() - 1));
                     if ((wordsArray[i + 1].length() <= 6 && wordsArray[i + 1].endsWith("H")) || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() >= 8 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 6 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 6) {
