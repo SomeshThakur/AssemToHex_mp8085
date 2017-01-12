@@ -782,6 +782,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "ORA":
+                    if ("B".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("B0\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("C".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("B1\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("D".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("B2\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("E".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("B3\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("H".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("B4\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("L".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("B5\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("M".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("B6\n");
+                        correctFormatInstruction = true;
+                    }
+                    if ("A".equals(wordsArray[i + 1])) {
+                        hexTxtArea.append("B7\n");
+                        correctFormatInstruction = true;
+                    }
+
+                    break;
+
                 case "XRA":
                     if ("B".equals(wordsArray[i + 1])) {
                         hexTxtArea.append("A8\n");
