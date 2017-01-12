@@ -1066,13 +1066,13 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
-                    case "RET":
+                case "RET":
                     hexTxtArea.append("C9\n");
                     correctFormatInstruction = true;
                     i--;
 
                     break;
-                    
+
                 case "STA":
                     boolean staaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
                     if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
@@ -1428,6 +1428,126 @@ public class AssemToHex extends javax.swing.JFrame {
                     } else {
                         hexTxtArea.append("Invalid Address\n");
                         rpoaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "CC":
+                    boolean ccaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (ccaddr) {
+                        hexTxtArea.append("DC " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        ccaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "CNC":
+                    boolean cncaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (cncaddr) {
+                        hexTxtArea.append("D4 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        cncaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "CP":
+                    boolean cpaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (cpaddr) {
+                        hexTxtArea.append("F4 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        cpaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "CM":
+                    boolean cmaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (cmaddr) {
+                        hexTxtArea.append("FC " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        cmaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "CZ":
+                    boolean czaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (czaddr) {
+                        hexTxtArea.append("CC " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        czaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "CNZ":
+                    boolean cnzaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (cnzaddr) {
+                        hexTxtArea.append("C4 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        cnzaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "CPE":
+                    boolean cpeaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (cpeaddr) {
+                        hexTxtArea.append("EC " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        cpeaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "CPO":
+                    boolean cpoaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (cpoaddr) {
+                        hexTxtArea.append("E4 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        cpoaddr = true;
                     }
                     correctFormatInstruction = true;
 
