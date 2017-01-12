@@ -1073,6 +1073,18 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "OUT":
+                    hexTxtArea.append("D3 " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "IN":
+                    hexTxtArea.append("DB " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    correctFormatInstruction = true;
+
+                    break;
+
                 case "STA":
                     boolean staaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
                     if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
@@ -1098,6 +1110,21 @@ public class AssemToHex extends javax.swing.JFrame {
                     } else {
                         hexTxtArea.append("Invalid Data\n");
                         adidata = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "ACI":
+                    boolean acidata = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 3 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() < 3 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 2 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 2) {
+                        hexTxtArea.append("Invalid Data!\n");
+                        correctFormatInstruction = true;
+                    } else if (acidata) {
+                        hexTxtArea.append("CE " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Data\n");
+                        acidata = true;
                     }
                     correctFormatInstruction = true;
 
