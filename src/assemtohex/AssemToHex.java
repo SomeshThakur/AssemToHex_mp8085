@@ -963,39 +963,50 @@ public class AssemToHex extends javax.swing.JFrame {
                     break;
 
                 case "RST":
-                    if ("0".equals(instructionsArray[i + 1])) {
-                        hexTxtArea.append("C7\n");
+                    boolean rstaaddr = Pattern.matches("\\d*", instructionsArray[i + 2]);
+                    if (instructionsArray[i + 2].endsWith("H") && instructionsArray[i + 2].length() > 5 || instructionsArray[i + 1].endsWith("H") && instructionsArray[i + 2].length() <= 4 || (!instructionsArray[i + 2].endsWith("H")) && instructionsArray[i + 2].length() >= 5 || (!instructionsArray[i + 2].endsWith("H")) && instructionsArray[i + 2].length() < 4) {
+                        hexTxtArea.append("Invalid Address!\n");
                         correctFormatInstruction = true;
-                    }
-                    if ("1".equals(instructionsArray[i + 1])) {
-                        hexTxtArea.append("CF\n");
-                        correctFormatInstruction = true;
-                    }
-                    if ("2".equals(instructionsArray[i + 1])) {
-                        hexTxtArea.append("D7\n");
-                        correctFormatInstruction = true;
-                    }
-                    if ("3".equals(instructionsArray[i + 1])) {
-                        hexTxtArea.append("DF\n");
-                        correctFormatInstruction = true;
-                    }
-                    if ("4".equals(instructionsArray[i + 1])) {
-                        hexTxtArea.append("E7\n");
-                        correctFormatInstruction = true;
-                    }
-                    if ("5".equals(instructionsArray[i + 1])) {
-                        hexTxtArea.append("EF\n");
-                        correctFormatInstruction = true;
-                    }
-                    if ("6".equals(instructionsArray[i + 1])) {
-                        hexTxtArea.append("F7\n");
-                        correctFormatInstruction = true;
-                    }
-                    if ("7".equals(instructionsArray[i + 1])) {
-                        hexTxtArea.append("FF\n");
-                        correctFormatInstruction = true;
-                    }
+                    } else if (rstaaddr) {
 
+                        if ("0".equals(instructionsArray[i + 1])) {
+                            hexTxtArea.append("C7 " + instructionsArray[i + 2].substring(2, 4) + " " + instructionsArray[i + 2].substring(0, 2) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if ("1".equals(instructionsArray[i + 1])) {
+                            hexTxtArea.append("CF " + instructionsArray[i + 2].substring(2, 4) + " " + instructionsArray[i + 2].substring(0, 2) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if ("2".equals(instructionsArray[i + 1])) {
+                            hexTxtArea.append("D7 " + instructionsArray[i + 2].substring(2, 4) + " " + instructionsArray[i + 2].substring(0, 2) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if ("3".equals(instructionsArray[i + 1])) {
+                            hexTxtArea.append("DF " + instructionsArray[i + 2].substring(2, 4) + " " + instructionsArray[i + 2].substring(0, 2) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if ("4".equals(instructionsArray[i + 1])) {
+                            hexTxtArea.append("E7 " + instructionsArray[i + 2].substring(2, 4) + " " + instructionsArray[i + 2].substring(0, 2) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if ("5".equals(instructionsArray[i + 1])) {
+                            hexTxtArea.append("EF " + instructionsArray[i + 2].substring(2, 4) + " " + instructionsArray[i + 2].substring(0, 2) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if ("6".equals(instructionsArray[i + 1])) {
+                            hexTxtArea.append("F7 " + instructionsArray[i + 2].substring(2, 4) + " " + instructionsArray[i + 2].substring(0, 2) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                        if ("7".equals(instructionsArray[i + 1])) {
+                            hexTxtArea.append("FF " + instructionsArray[i + 2].substring(2, 4) + " " + instructionsArray[i + 2].substring(0, 2) + "\n");
+                            correctFormatInstruction = true;
+                        }
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        correctFormatInstruction = true;
+                        rstaaddr = true;
+                    }
+                    i++;
                     break;
 
                 case "LXI":
