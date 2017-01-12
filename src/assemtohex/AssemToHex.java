@@ -1096,6 +1096,21 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "CPI":
+                    boolean cpidata = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 3 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() < 3 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 2 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 2) {
+                        hexTxtArea.append("Invalid Data!\n");
+                        correctFormatInstruction = true;
+                    } else if (cpidata) {
+                        hexTxtArea.append("FE " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Data\n");
+                        cpidata = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
                 case "LDA":
                     boolean ldaaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
                     if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() <= 4) {
@@ -1170,7 +1185,7 @@ public class AssemToHex extends javax.swing.JFrame {
                     correctFormatInstruction = true;
 
                     break;
-                    
+
                 case "SHLD":
                     boolean shldaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
                     if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
