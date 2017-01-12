@@ -1096,6 +1096,36 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "SUI":
+                    boolean suidata = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 3 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() < 3 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 2 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 2) {
+                        hexTxtArea.append("Invalid Data!\n");
+                        correctFormatInstruction = true;
+                    } else if (suidata) {
+                        hexTxtArea.append("D6 " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Data\n");
+                        suidata = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "SBI":
+                    boolean sbidata = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 3 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() < 3 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 2 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 2) {
+                        hexTxtArea.append("Invalid Data!\n");
+                        correctFormatInstruction = true;
+                    } else if (sbidata) {
+                        hexTxtArea.append("DE " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Data\n");
+                        sbidata = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
                 case "CPI":
                     boolean cpidata = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
                     if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 3 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() < 3 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 2 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 2) {
