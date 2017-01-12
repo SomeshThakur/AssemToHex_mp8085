@@ -183,7 +183,7 @@ public class AssemToHex extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-     jLabel3.setText("");
+        jLabel3.setText("");
     }//GEN-LAST:event_jLabel3MouseClicked
     /**
      * @param args the command line arguments
@@ -1151,6 +1151,21 @@ public class AssemToHex extends javax.swing.JFrame {
                     } else {
                         hexTxtArea.append("Invalid Address\n");
                         jmpaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
+                case "LHLD":
+                    boolean lhldaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (lhldaddr) {
+                        hexTxtArea.append("2A " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        lhldaddr = true;
                     }
                     correctFormatInstruction = true;
 
