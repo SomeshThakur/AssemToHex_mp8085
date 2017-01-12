@@ -1170,6 +1170,21 @@ public class AssemToHex extends javax.swing.JFrame {
                     correctFormatInstruction = true;
 
                     break;
+                    
+                case "SHLD":
+                    boolean shldaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
+                        hexTxtArea.append("Invalid Address!\n");
+                        correctFormatInstruction = true;
+                    } else if (shldaddr) {
+                        hexTxtArea.append("22 " + wordsArray[i + 1].substring(2, 4) + " " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Address\n");
+                        shldaddr = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
 
                 default:
                     i--;
