@@ -1170,6 +1170,20 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "RIM":
+                    hexTxtArea.append("20\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
+                case "SIM":
+                    hexTxtArea.append("30\n");
+                    correctFormatInstruction = true;
+                    i--;
+
+                    break;
+
                 case "OUT":
                     hexTxtArea.append("D3 " + wordsArray[i + 1].substring(0, 2) + "\n");
                     correctFormatInstruction = true;
