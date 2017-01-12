@@ -1287,6 +1287,21 @@ public class AssemToHex extends javax.swing.JFrame {
 
                     break;
 
+                case "XRI":
+                    boolean xridata = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
+                    if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 3 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() < 3 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() > 2 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 2) {
+                        hexTxtArea.append("Invalid Data!\n");
+                        correctFormatInstruction = true;
+                    } else if (xridata) {
+                        hexTxtArea.append("EE " + wordsArray[i + 1].substring(0, 2) + "\n");
+                    } else {
+                        hexTxtArea.append("Invalid Data\n");
+                        xridata = true;
+                    }
+                    correctFormatInstruction = true;
+
+                    break;
+
                 case "LDA":
                     boolean ldaaddr = Pattern.matches("\\d*", wordsArray[i + 1].substring(0, wordsArray[i + 1].length() - 1));
                     if (wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() > 5 || wordsArray[i + 1].endsWith("H") && wordsArray[i + 1].length() <= 4 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() >= 5 || (!wordsArray[i + 1].endsWith("H")) && wordsArray[i + 1].length() < 4) {
