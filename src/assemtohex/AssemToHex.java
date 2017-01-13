@@ -8,6 +8,7 @@ package assemtohex;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
@@ -237,9 +238,7 @@ public class AssemToHex extends javax.swing.JFrame {
         hexTxtArea.setText("");
         ArrayList<String> instructionsArray = new ArrayList();
         String tmp[] = assemTxtArea.getText().split("\\s+");
-        for (String line : tmp) {
-            instructionsArray.add(line);
-        }
+        instructionsArray.addAll(Arrays.asList(tmp));
         boolean correctFormatInstruction;
         for (int i = 0; i < instructionsArray.size(); i += 2) {
             correctFormatInstruction = false;
