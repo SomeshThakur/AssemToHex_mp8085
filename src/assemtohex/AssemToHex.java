@@ -237,8 +237,7 @@ public class AssemToHex extends javax.swing.JFrame {
     private void convertToHex() throws BadLocationException {
         hexTxtArea.setText("");
         ArrayList<String> instructionsArray = new ArrayList();
-        String tmp[] = assemTxtArea.getText().split("\\s+");
-        instructionsArray.addAll(Arrays.asList(tmp));
+        instructionsArray.addAll(Arrays.asList(assemTxtArea.getText().split("\\s+")));
         boolean correctFormatInstruction;
         for (int i = 0; i < instructionsArray.size(); i += 2) {
             correctFormatInstruction = false;
