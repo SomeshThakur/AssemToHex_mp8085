@@ -48,7 +48,7 @@ public class AssemToHex extends javax.swing.JFrame {
         insCount = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        aboutInfo = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         add2_8bnum = new javax.swing.JMenuItem();
@@ -108,13 +108,13 @@ public class AssemToHex extends javax.swing.JFrame {
 
         jMenu1.setText("About");
 
-        jMenuItem1.setText("AssemToHex");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        aboutInfo.setText("AssemToHex");
+        aboutInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                aboutInfoActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(aboutInfo);
 
         jMenuBar1.add(jMenu1);
         jMenuBar1.add(jMenu2);
@@ -227,19 +227,19 @@ public class AssemToHex extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void aboutInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutInfoActionPerformed
         JOptionPane.showMessageDialog(null, "Assembly to Machine code convertor\n"
                 + "Developed by Somesh Thakur.\n"
                 + "Contact : Someshthakur33@gmail.com\n"
-                + "Version : 0.1 (beta)", "About", JOptionPane.INFORMATION_MESSAGE);        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+                + "Version : 0.2 (beta)", "About", JOptionPane.INFORMATION_MESSAGE);        // TODO add your handling code here:
+    }//GEN-LAST:event_aboutInfoActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         jLabel3.setText("");
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void cpl2s16bnumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpl2s16bnumActionPerformed
-        assemTxtArea.setText("" + ""
+        assemTxtArea.setText(""
                 + "LXI H,4502H\n"
                 + "MVI B,00H\n"
                 + "MOV A,M\n"
@@ -333,6 +333,7 @@ public class AssemToHex extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem aboutInfo;
     private javax.swing.JMenuItem add2_16bnum;
     private javax.swing.JMenuItem add2_8bnum;
     private javax.swing.JTextArea assemTxtArea;
@@ -347,7 +348,6 @@ public class AssemToHex extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JMenuItem sumseries;
