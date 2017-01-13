@@ -56,10 +56,15 @@ public class AssemToHex extends javax.swing.JFrame {
         cpl2s16bnum = new javax.swing.JMenuItem();
         sumseries = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Assembly to Machine Code (HEX) 8085MP");
         setIconImage(Toolkit.getDefaultToolkit().getImage(AssemToHex.class.getResource("icon.png")));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Assembly Code :");
@@ -288,6 +293,13 @@ public class AssemToHex extends javax.swing.JFrame {
                 + "STA 4550H\n"
                 + "HLT\n");
     }//GEN-LAST:event_sumseriesActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        int y = JOptionPane.showConfirmDialog(null, "Do you really want to exit ? ", "Warning!", JOptionPane.YES_NO_OPTION);
+        if (y == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_formWindowClosing
     /**
      * @param args the command line arguments
      */
