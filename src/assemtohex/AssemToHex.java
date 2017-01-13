@@ -141,9 +141,9 @@ public class AssemToHex extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1)
-                        .addComponent(insCount))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(insCount, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel1))
                     .addComponent(jLabel2))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -248,263 +248,328 @@ public class AssemToHex extends javax.swing.JFrame {
                     ArrayList<String> instructionsArray = new ArrayList();
                     instructionsArray.addAll(Arrays.asList(assemTxtArea.getText().split("\\s+")));
                     boolean correctFormatInstruction;
+                    int instructionsCount = 0;
                     for (int i = 0; i < instructionsArray.size(); i += 2) {
                         correctFormatInstruction = false;
                         switch (instructionsArray.get(i)) {
                             case "MOV":
                                 if ("B,B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append(" 40\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("41\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("42\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("43\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("44\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("45\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("46\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("47\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("48\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("49\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("4A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("4B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("4C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("4D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("4E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("4F\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("50\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("51\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("52\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("53\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("54\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("55\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("56\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("57\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("58\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("59\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("5A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("5B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("5C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("5D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("5E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("5F\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("60\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("61\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("62\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("63\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("64\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("65\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("66\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("67\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("68\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("69\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("6A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("6B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("6C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("6D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("6E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("6F\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("70\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("71\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("72\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("73\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("74\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("75\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("76\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("77\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("78\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("79\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("7A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("7B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("7C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("7D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("7E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("7F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -512,34 +577,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "ADD":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("80\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("81\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("82\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("83\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("84\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("85\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("86\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("87\n");
                                     correctFormatInstruction = true;
                                 }
@@ -548,34 +621,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "ADC":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("88\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("89\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("8A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("8B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("8C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("8D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("8E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("8F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -584,34 +665,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "SUB":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("90\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("91\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("92\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("93\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("94\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("95\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("96\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("97\n");
                                     correctFormatInstruction = true;
                                 }
@@ -620,34 +709,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "SBB":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("98\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("99\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("9A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("9B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("9C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("9D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("9E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("9F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -656,18 +753,22 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "INX":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("03\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("13\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("23\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("SP".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("33\n");
                                     correctFormatInstruction = true;
                                 }
@@ -676,18 +777,22 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "PUSH":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("C5\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("D5\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("E5\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("PSW".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("F5\n");
                                     correctFormatInstruction = true;
                                 }
@@ -696,18 +801,22 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "POP":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("C1\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("D1\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("E1\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("PSW".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("F1\n");
                                     correctFormatInstruction = true;
                                 }
@@ -716,18 +825,22 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "DCX":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("0B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("1B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("2B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("SP".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("3B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -736,10 +849,12 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "STAX":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("02\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("12\n");
                                     correctFormatInstruction = true;
                                 }
@@ -748,10 +863,12 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "LDAX":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("0A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("1A\n");
                                     correctFormatInstruction = true;
                                 }
@@ -760,34 +877,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "ANA":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("A0\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("A1\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("A2\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("A3\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("A4\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("A5\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("A6\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("A7\n");
                                     correctFormatInstruction = true;
                                 }
@@ -796,34 +921,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "XRA":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("A8\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("A9\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("AA\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("AB\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("AC\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("AD\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("AE\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("AF\n");
                                     correctFormatInstruction = true;
                                 }
@@ -832,34 +965,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "ORA":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("B0\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("B1\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("B2\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("B3\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("B4\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("B5\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("B6\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("B7\n");
                                     correctFormatInstruction = true;
                                 }
@@ -868,34 +1009,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "CMP":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("B8\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("B9\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("BA\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("BB\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("BC\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("BD\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("BE\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("BF\n");
                                     correctFormatInstruction = true;
                                 }
@@ -904,34 +1053,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "INR":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("04\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("0C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("14\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("1C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("24\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("2C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("34\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("3C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -940,34 +1097,42 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "DCR":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("05\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("0D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("15\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("1D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("25\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("2D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("35\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
+                                    instructionsCount++;
                                     hexTxtArea.append("3D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -977,43 +1142,53 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "RST":
                                 boolean rstaaddr = Pattern.matches("\\d*", instructionsArray.get(i + 2));
                                 if (instructionsArray.get(i + 2).endsWith("H") && instructionsArray.get(i + 2).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 2).length() <= 4 || (!instructionsArray.get(i + 2).endsWith("H")) && instructionsArray.get(i + 2).length() >= 5 || (!instructionsArray.get(i + 2).endsWith("H")) && instructionsArray.get(i + 2).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (rstaaddr) {
 
                                     if ("0".equals(instructionsArray.get(i + 1))) {
+                                        instructionsCount++;
                                         hexTxtArea.append("C7 " + instructionsArray.get(i + 2).substring(2, 4) + " " + instructionsArray.get(i + 2).substring(0, 2) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if ("1".equals(instructionsArray.get(i + 1))) {
+                                        instructionsCount++;
                                         hexTxtArea.append("CF " + instructionsArray.get(i + 2).substring(2, 4) + " " + instructionsArray.get(i + 2).substring(0, 2) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if ("2".equals(instructionsArray.get(i + 1))) {
+                                        instructionsCount++;
                                         hexTxtArea.append("D7 " + instructionsArray.get(i + 2).substring(2, 4) + " " + instructionsArray.get(i + 2).substring(0, 2) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if ("3".equals(instructionsArray.get(i + 1))) {
+                                        instructionsCount++;
                                         hexTxtArea.append("DF " + instructionsArray.get(i + 2).substring(2, 4) + " " + instructionsArray.get(i + 2).substring(0, 2) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if ("4".equals(instructionsArray.get(i + 1))) {
+                                        instructionsCount++;
                                         hexTxtArea.append("E7 " + instructionsArray.get(i + 2).substring(2, 4) + " " + instructionsArray.get(i + 2).substring(0, 2) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if ("5".equals(instructionsArray.get(i + 1))) {
+                                        instructionsCount++;
                                         hexTxtArea.append("EF " + instructionsArray.get(i + 2).substring(2, 4) + " " + instructionsArray.get(i + 2).substring(0, 2) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if ("6".equals(instructionsArray.get(i + 1))) {
+                                        instructionsCount++;
                                         hexTxtArea.append("F7 " + instructionsArray.get(i + 2).substring(2, 4) + " " + instructionsArray.get(i + 2).substring(0, 2) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if ("7".equals(instructionsArray.get(i + 1))) {
+                                        instructionsCount++;
                                         hexTxtArea.append("FF " + instructionsArray.get(i + 2).substring(2, 4) + " " + instructionsArray.get(i + 2).substring(0, 2) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     correctFormatInstruction = true;
                                     rstaaddr = true;
@@ -1024,26 +1199,32 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "LXI":
                                 boolean lxiaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(2, instructionsArray.get(i + 1).length() - 1));
                                 if ((instructionsArray.get(i + 1).length() <= 6 && instructionsArray.get(i + 1).endsWith("H")) || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() >= 8 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() > 6 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 6) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (lxiaddr) {
                                     if (instructionsArray.get(i + 1).startsWith("B,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("01 " + instructionsArray.get(i + 1).substring(4, 6) + " " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("D,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("11 " + instructionsArray.get(i + 1).substring(4, 6) + " " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("H,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("21 " + instructionsArray.get(i + 1).substring(4, 6) + " " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("SP,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("31 " + instructionsArray.get(i + 1).substring(4, 6) + " " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     correctFormatInstruction = true;
                                     lxiaddr = true;
@@ -1053,49 +1234,60 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "MVI":
                                 boolean mvidata = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(2, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() > 4 || instructionsArray.get(i + 1).length() < 4) {
-                                    hexTxtArea.append("Invalid Data\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (mvidata) {
                                     if (instructionsArray.get(i + 1).startsWith("B,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("06 " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("C,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("0E " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("D,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("16 " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("E,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("1E " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("H,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("26 " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("L,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("2E " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("M,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("36 " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("A,")) {
+                                        instructionsCount++;
                                         hexTxtArea.append("3E " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                 } else {
-                                    hexTxtArea.append("Invalid data!\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                     mvidata = true;
                                 }
                                 break;
 
                             case "HLT":
+                                instructionsCount++;
                                 hexTxtArea.append("CF/EF (Depends on kit VI/ESA)\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1103,6 +1295,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "NOP":
+                                instructionsCount++;
                                 hexTxtArea.append("00\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1110,6 +1303,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "CMA":
+                                instructionsCount++;
                                 hexTxtArea.append("2F\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1117,6 +1311,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "CMC":
+                                instructionsCount++;
                                 hexTxtArea.append("3F\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1124,6 +1319,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "STC":
+                                instructionsCount++;
                                 hexTxtArea.append("37\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1131,6 +1327,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "RAR":
+                                instructionsCount++;
                                 hexTxtArea.append("1F\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1138,6 +1335,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "RRC":
+                                instructionsCount++;
                                 hexTxtArea.append("0F\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1145,6 +1343,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "RLC":
+                                instructionsCount++;
                                 hexTxtArea.append("07\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1152,6 +1351,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "RAL":
+                                instructionsCount++;
                                 hexTxtArea.append("17\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1159,6 +1359,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "DAA":
+                                instructionsCount++;
                                 hexTxtArea.append("27\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1166,6 +1367,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "RET":
+                                instructionsCount++;
                                 hexTxtArea.append("C9\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1173,6 +1375,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "SPHL":
+                                instructionsCount++;
                                 hexTxtArea.append("F9\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1180,6 +1383,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "XTHL":
+                                instructionsCount++;
                                 hexTxtArea.append("E3\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1187,6 +1391,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "XCHG":
+                                instructionsCount++;
                                 hexTxtArea.append("EB\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1194,6 +1399,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "RIM":
+                                instructionsCount++;
                                 hexTxtArea.append("20\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1201,6 +1407,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "SIM":
+                                instructionsCount++;
                                 hexTxtArea.append("30\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1208,6 +1415,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "EI":
+                                instructionsCount++;
                                 hexTxtArea.append("FB\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1215,6 +1423,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "DI":
+                                instructionsCount++;
                                 hexTxtArea.append("F3\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1222,12 +1431,14 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "OUT":
+                                instructionsCount++;
                                 hexTxtArea.append("D3 " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 correctFormatInstruction = true;
 
                                 break;
 
                             case "IN":
+                                instructionsCount++;
                                 hexTxtArea.append("DB " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 correctFormatInstruction = true;
 
@@ -1236,11 +1447,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "STA":
                                 boolean staaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (staaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("32 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     staaddr = true;
                                 }
@@ -1251,12 +1465,15 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "ADI":
                                 boolean adidata = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 3 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() < 3 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() > 2 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 2) {
-                                    hexTxtArea.append("Invalid Data!\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (adidata) {
+                                    instructionsCount++;
                                     hexTxtArea.append("C6 " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
-                                    hexTxtArea.append("Invalid Data\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     adidata = true;
                                 }
                                 correctFormatInstruction = true;
@@ -1266,12 +1483,15 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "ACI":
                                 boolean acidata = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 3 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() < 3 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() > 2 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 2) {
-                                    hexTxtArea.append("Invalid Data!\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (acidata) {
+                                    instructionsCount++;
                                     hexTxtArea.append("CE " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
-                                    hexTxtArea.append("Invalid Data\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     acidata = true;
                                 }
                                 correctFormatInstruction = true;
@@ -1281,12 +1501,15 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "SUI":
                                 boolean suidata = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 3 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() < 3 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() > 2 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 2) {
-                                    hexTxtArea.append("Invalid Data!\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (suidata) {
+                                    instructionsCount++;
                                     hexTxtArea.append("D6 " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
-                                    hexTxtArea.append("Invalid Data\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     suidata = true;
                                 }
                                 correctFormatInstruction = true;
@@ -1296,12 +1519,15 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "SBI":
                                 boolean sbidata = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 3 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() < 3 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() > 2 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 2) {
-                                    hexTxtArea.append("Invalid Data!\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (sbidata) {
+                                    instructionsCount++;
                                     hexTxtArea.append("DE " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
-                                    hexTxtArea.append("Invalid Data\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     sbidata = true;
                                 }
                                 correctFormatInstruction = true;
@@ -1311,12 +1537,15 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "CPI":
                                 boolean cpidata = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 3 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() < 3 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() > 2 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 2) {
-                                    hexTxtArea.append("Invalid Data!\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (cpidata) {
+                                    instructionsCount++;
                                     hexTxtArea.append("FE " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
-                                    hexTxtArea.append("Invalid Data\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     cpidata = true;
                                 }
                                 correctFormatInstruction = true;
@@ -1326,12 +1555,15 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "ORI":
                                 boolean oridata = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 3 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() < 3 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() > 2 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 2) {
-                                    hexTxtArea.append("Invalid Data!\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (oridata) {
+                                    instructionsCount++;
                                     hexTxtArea.append("F6 " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
-                                    hexTxtArea.append("Invalid Data\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     oridata = true;
                                 }
                                 correctFormatInstruction = true;
@@ -1341,12 +1573,15 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "XRI":
                                 boolean xridata = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 3 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() < 3 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() > 2 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 2) {
-                                    hexTxtArea.append("Invalid Data!\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (xridata) {
+                                    instructionsCount++;
                                     hexTxtArea.append("EE " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
-                                    hexTxtArea.append("Invalid Data\n");
+                                    instructionsCount++;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     xridata = true;
                                 }
                                 correctFormatInstruction = true;
@@ -1356,11 +1591,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "LDA":
                                 boolean ldaaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (ldaaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("3A " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     ldaaddr = true;
                                 }
@@ -1371,11 +1609,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "JNC":
                                 boolean jncaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (jncaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("D2 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     jncaddr = true;
                                 }
@@ -1386,11 +1627,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "JNZ":
                                 boolean jnzaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (jnzaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("C2 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     jnzaddr = true;
                                 }
@@ -1401,11 +1645,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "JZ":
                                 boolean jzaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (jzaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("CA " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     jzaddr = true;
                                 }
@@ -1416,11 +1663,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "JC":
                                 boolean jcaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (jcaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("DA " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     jcaddr = true;
                                 }
@@ -1431,11 +1681,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "JPO":
                                 boolean jpoaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (jpoaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("E2 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     jpoaddr = true;
                                 }
@@ -1446,11 +1699,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "JPE":
                                 boolean jpeaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (jpeaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("EA " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     jpeaddr = true;
                                 }
@@ -1461,11 +1717,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "JP":
                                 boolean jpaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (jpaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("F2 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     jpaddr = true;
                                 }
@@ -1476,11 +1735,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "JMP":
                                 boolean jmpaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (jmpaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("C3 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     jmpaddr = true;
                                 }
@@ -1491,11 +1753,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "LHLD":
                                 boolean lhldaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (lhldaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("2A " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     lhldaddr = true;
                                 }
@@ -1506,11 +1771,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "SHLD":
                                 boolean shldaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (shldaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("22 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     shldaddr = true;
                                 }
@@ -1521,11 +1789,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "RC":
                                 boolean rcaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (rcaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("D8 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     rcaddr = true;
                                 }
@@ -1536,11 +1807,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "RNC":
                                 boolean rncaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (rncaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("D0 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     rncaddr = true;
                                 }
@@ -1551,11 +1825,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "RP":
                                 boolean rpaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (rpaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("F0 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     rpaddr = true;
                                 }
@@ -1566,11 +1843,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "RM":
                                 boolean rmaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (rmaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("F8 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     rmaddr = true;
                                 }
@@ -1581,11 +1861,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "RZ":
                                 boolean rzaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (rzaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("DA " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     rzaddr = true;
                                 }
@@ -1596,11 +1879,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "RNZ":
                                 boolean rnzaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (rnzaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("C0 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     rnzaddr = true;
                                 }
@@ -1611,11 +1897,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "RPE":
                                 boolean rpeaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (rpeaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("E8 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     rpeaddr = true;
                                 }
@@ -1626,11 +1915,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "RPO":
                                 boolean rpoaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (rpoaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("E0 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     rpoaddr = true;
                                 }
@@ -1641,11 +1933,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "CC":
                                 boolean ccaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (ccaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("DC " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     ccaddr = true;
                                 }
@@ -1656,11 +1951,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "CNC":
                                 boolean cncaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (cncaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("D4 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     cncaddr = true;
                                 }
@@ -1671,11 +1969,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "CP":
                                 boolean cpaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (cpaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("F4 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     cpaddr = true;
                                 }
@@ -1686,11 +1987,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "CM":
                                 boolean cmaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (cmaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("FC " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     cmaddr = true;
                                 }
@@ -1701,11 +2005,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "CZ":
                                 boolean czaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (czaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("CC " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     czaddr = true;
                                 }
@@ -1716,11 +2023,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "CNZ":
                                 boolean cnzaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (cnzaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("C4 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     cnzaddr = true;
                                 }
@@ -1731,11 +2041,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "CPE":
                                 boolean cpeaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (cpeaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("EC " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     cpeaddr = true;
                                 }
@@ -1746,11 +2059,14 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "CPO":
                                 boolean cpoaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(0, instructionsArray.get(i + 1).length() - 1));
                                 if (instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() > 5 || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() <= 4 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() >= 5 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 4) {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address!\n");
                                     correctFormatInstruction = true;
                                 } else if (cpoaddr) {
+                                    instructionsCount++;
                                     hexTxtArea.append("E4 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
+                                    instructionsCount++;
                                     hexTxtArea.append("Invalid Address\n");
                                     cpoaddr = true;
                                 }
@@ -1760,15 +2076,18 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             default:
                                 i--;
+                                instructionsCount++;
                                 hexTxtArea.append("Unknown Instruction!\n");
                                 correctFormatInstruction = true;
                         }
                         if (!correctFormatInstruction) {
+                            instructionsCount++;
                             hexTxtArea.append("Instruction Format is wrong!\n");
                         }
                     }
-                    insCount.setText("No. of Instructions :" + instructionsArray.size());
+                    insCount.setText("No. of Instructions :" + instructionsCount);
                 } catch (Exception e) {
+                    System.out.println(e);
                 }
             }
         }.start();
