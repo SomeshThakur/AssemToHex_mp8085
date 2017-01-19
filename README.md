@@ -9,3 +9,4 @@ Features : -
   - Easy to use. Just one click UI.
 
 [* Developed And Maintained by Somesh Thakur. Contact :- someshthakur33@gmail.com *].
+[![Download Assembly to Machine code (HEX) converter](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/assemtohex/files/latest/download)
