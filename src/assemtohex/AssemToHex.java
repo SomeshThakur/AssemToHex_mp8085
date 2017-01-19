@@ -272,9 +272,9 @@ public class AssemToHex extends javax.swing.JFrame {
     private void aboutInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutInfoActionPerformed
         ImageIcon icon = new ImageIcon(Toolkit.getDefaultToolkit().getImage(AssemToHex.class.getResource("About_icon.png")));
         JOptionPane.showMessageDialog(null, "Assembly to Machine code convertor\n"
-                + "Developed by Somesh Thakur.\n"
+                + "Developed and Maintain by Somesh Thakur.\n"
                 + "Contact : Someshthakur33@gmail.com\n"
-                + "Version : 0.2 (beta)", "About", JOptionPane.INFORMATION_MESSAGE, icon);        // TODO add your handling code here:
+                + "Version : 1.0", "About", JOptionPane.INFORMATION_MESSAGE, icon);        // TODO add your handling code here:
     }//GEN-LAST:event_aboutInfoActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
