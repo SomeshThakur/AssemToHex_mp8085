@@ -435,449 +435,513 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "MOV":
                                 if ("B,B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append(" 40\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("41\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("42\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("43\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("44\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("45\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("46\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("B,A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("47\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("48\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("49\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("4A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("4B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("4C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("4D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("4E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C,A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("4F\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("50\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("51\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("52\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("53\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("54\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("55\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("56\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D,A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("57\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("58\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("59\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("5A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("5B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("5C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("5D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("5E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E,A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("5F\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("60\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("61\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("62\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("63\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("64\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("65\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("66\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H,A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("67\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("68\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("69\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("6A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("6B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("6C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("6D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("6E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L,A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("6F\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("70\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("71\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("72\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("73\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("74\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("75\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("76\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M,A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("77\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("78\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("79\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("7A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("7B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("7C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("7D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("7E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A,A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("7F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -886,57 +950,65 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "ADD":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("80\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("81\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("82\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("83\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("84\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("85\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("86\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("87\n");
                                     correctFormatInstruction = true;
                                 }
@@ -946,57 +1018,65 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "ADC":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("88\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("89\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("8A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("8B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("8C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("8D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("8E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("8F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1006,57 +1086,65 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "SUB":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("90\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("91\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("92\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("93\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("94\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("95\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("96\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("97\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1066,57 +1154,65 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "SBB":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("98\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("99\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("9A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("9B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("9C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("9D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("9E\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("9F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1126,29 +1222,33 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "INX":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("03\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("13\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("23\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("SP".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("33\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1158,29 +1258,33 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "PUSH":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("C5\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("D5\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("E5\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("PSW".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("F5\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1190,29 +1294,33 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "POP":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("C1\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("D1\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("E1\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("PSW".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("F1\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1222,29 +1330,33 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "DCX":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("0B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("1B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("2B\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("SP".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("3B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1254,15 +1366,17 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "STAX":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("02\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("12\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1272,15 +1386,17 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "LDAX":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("0A\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("1A\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1290,57 +1406,65 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "ANA":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("A0\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("A1\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("A2\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("A3\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("A4\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("A5\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("A6\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("A7\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1350,57 +1474,65 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "XRA":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("A8\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("A9\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("AA\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("AB\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("AC\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("AD\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("AE\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("AF\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1410,57 +1542,65 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "ORA":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("B0\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("B1\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("B2\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("B3\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("B4\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("B5\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("B6\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("B7\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1470,57 +1610,65 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "CMP":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("B8\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("B9\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("BA\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("BB\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("BC\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("BD\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("BE\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("BF\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1530,57 +1678,65 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "INR":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("04\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("0C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("14\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("1C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("24\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("2C\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("34\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("3C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1590,57 +1746,65 @@ public class AssemToHex extends javax.swing.JFrame {
                             case "DCR":
                                 if ("B".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("05\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("C".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("0D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("D".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("15\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("E".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("1D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("H".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("25\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("L".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("2D\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("M".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("35\n");
                                     correctFormatInstruction = true;
                                 }
                                 if ("A".equals(instructionsArray.get(i + 1))) {
                                     instructionsCount++;
-                                    address++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                    address += 1;
+
                                     hexTxtArea.append("3D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1728,42 +1892,43 @@ public class AssemToHex extends javax.swing.JFrame {
                                 boolean lxiaddr = Pattern.matches("\\d*", instructionsArray.get(i + 1).substring(2, instructionsArray.get(i + 1).length() - 1));
                                 if ((instructionsArray.get(i + 1).length() <= 6 && instructionsArray.get(i + 1).endsWith("H")) || instructionsArray.get(i + 1).endsWith("H") && instructionsArray.get(i + 1).length() >= 8 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() > 6 || (!instructionsArray.get(i + 1).endsWith("H")) && instructionsArray.get(i + 1).length() < 6) {
                                     instructionsCount++;
-                                    address += 2;
+                                    address += 3;
                                     addressTxtArea.append("\n");
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (lxiaddr) {
                                     if (instructionsArray.get(i + 1).startsWith("B,")) {
                                         instructionsCount++;
-                                        address += 2;
-                                        addressTxtArea.append("" + Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+
+                                        addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                         hexTxtArea.append("01 " + instructionsArray.get(i + 1).substring(4, 6) + " " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
+                                        address += 3;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("D,")) {
                                         instructionsCount++;
-                                        address += 2;
-                                        addressTxtArea.append("" + Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                        addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
+                                        address += 3;
                                         hexTxtArea.append("11 " + instructionsArray.get(i + 1).substring(4, 6) + " " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("H,")) {
                                         instructionsCount++;
-                                        address += 2;
-                                        addressTxtArea.append("" + Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                        addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
+                                        address += 3;
                                         hexTxtArea.append("21 " + instructionsArray.get(i + 1).substring(4, 6) + " " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("SP,")) {
                                         instructionsCount++;
-                                        address += 2;
-                                        addressTxtArea.append("" + Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                        addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
+                                        address += 3;
                                         hexTxtArea.append("31 " + instructionsArray.get(i + 1).substring(4, 6) + " " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                 } else {
                                     instructionsCount++;
-                                    address += 2;
+                                    address += 3;
                                     addressTxtArea.append("\n");
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
@@ -1782,57 +1947,57 @@ public class AssemToHex extends javax.swing.JFrame {
                                 } else if (mvidata) {
                                     if (instructionsArray.get(i + 1).startsWith("B,")) {
                                         instructionsCount++;
-                                        address++;
-                                        addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                        addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                        address += 2;
                                         hexTxtArea.append("06 " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("C,")) {
                                         instructionsCount++;
-                                        address++;
-                                        addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                        addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                        address += 2;
                                         hexTxtArea.append("0E " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("D,")) {
                                         instructionsCount++;
-                                        address++;
-                                        addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                        addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                        address += 2;
                                         hexTxtArea.append("16 " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("E,")) {
                                         instructionsCount++;
-                                        address++;
-                                        addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                        addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                        address += 2;
                                         hexTxtArea.append("1E " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("H,")) {
                                         instructionsCount++;
-                                        address++;
-                                        addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                        addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                        address += 2;
                                         hexTxtArea.append("26 " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("L,")) {
                                         instructionsCount++;
-                                        address++;
-                                        addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                        addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                        address += 2;
                                         hexTxtArea.append("2E " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("M,")) {
                                         instructionsCount++;
-                                        address++;
-                                        addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                        addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                        address += 2;
                                         hexTxtArea.append("36 " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
                                     if (instructionsArray.get(i + 1).startsWith("A,")) {
                                         instructionsCount++;
-                                        address++;
-                                        addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                        addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                        address += 2;
                                         hexTxtArea.append("3E " + instructionsArray.get(i + 1).substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
                                     }
@@ -1848,8 +2013,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "HLT":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("CF/EF (Depends on kit VI/ESA)\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1858,8 +2023,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "NOP":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("00\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1868,8 +2033,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "CMA":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("2F\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1878,8 +2043,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "CMC":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("3F\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1888,8 +2053,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "STC":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("37\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1898,8 +2063,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "RAR":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("1F\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1908,8 +2073,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "RRC":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("0F\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1918,8 +2083,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "RLC":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("07\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1928,8 +2093,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "RAL":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("17\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1938,8 +2103,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "DAA":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("27\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1948,8 +2113,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "RET":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("C9\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1958,8 +2123,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "SPHL":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("F9\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1968,8 +2133,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "XTHL":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("E3\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1978,8 +2143,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "XCHG":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("EB\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1988,8 +2153,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "RIM":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("20\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -1998,8 +2163,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "SIM":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("30\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -2008,8 +2173,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "EI":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("FB\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -2018,8 +2183,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "DI":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("F3\n");
                                 correctFormatInstruction = true;
                                 i--;
@@ -2028,8 +2193,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "OUT":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("D3 " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 correctFormatInstruction = true;
 
@@ -2037,8 +2202,8 @@ public class AssemToHex extends javax.swing.JFrame {
 
                             case "IN":
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("DB " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 correctFormatInstruction = true;
 
@@ -2054,8 +2219,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (staaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("32 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2078,8 +2243,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (adidata) {
                                     instructionsCount++;
-                                    address++;
-                                    addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                    address += 2;
                                     hexTxtArea.append("C6 " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2102,8 +2267,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (anidata) {
                                     instructionsCount++;
-                                    address++;
-                                    addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                    address += 2;
                                     hexTxtArea.append("E6 " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2126,8 +2291,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (acidata) {
                                     instructionsCount++;
-                                    address++;
-                                    addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                    address += 2;
                                     hexTxtArea.append("CE " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2150,8 +2315,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (suidata) {
                                     instructionsCount++;
-                                    address++;
-                                    addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                    address += 2;
                                     hexTxtArea.append("D6 " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2174,8 +2339,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (sbidata) {
                                     instructionsCount++;
-                                    address++;
-                                    addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                    address += 2;
                                     hexTxtArea.append("DE " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2198,8 +2363,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (cpidata) {
                                     instructionsCount++;
-                                    address++;
-                                    addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                    address += 2;
                                     hexTxtArea.append("FE " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2222,8 +2387,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (oridata) {
                                     instructionsCount++;
-                                    address++;
-                                    addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                    address += 2;
                                     hexTxtArea.append("F6 " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2246,8 +2411,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (xridata) {
                                     instructionsCount++;
-                                    address++;
-                                    addressTxtArea.append(Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + "\n");
+                                    address += 2;
                                     hexTxtArea.append("EE " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2270,8 +2435,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (ldaaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("3A " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2294,8 +2459,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (jncaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("D2 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2318,8 +2483,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (jnzaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("C2 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2342,8 +2507,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (jzaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("CA " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2366,8 +2531,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (jcaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("DA " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2390,8 +2555,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (jpoaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("E2 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2414,8 +2579,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (jpeaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("EA " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2438,8 +2603,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (jpaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("F2 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2462,8 +2627,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (jmpaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("C3 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2486,8 +2651,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (lhldaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("2A " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2510,8 +2675,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (shldaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("22 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2535,8 +2700,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                 } else if (rcaddr) {
                                     instructionsCount++;
                                     address++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("D8 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2559,8 +2724,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (rncaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("D0 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2583,8 +2748,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (rpaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("F0 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2607,8 +2772,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (rmaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("F8 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2631,8 +2796,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (rzaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("DA " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2655,8 +2820,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (rnzaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("C0 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2679,8 +2844,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (rpeaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("E8 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2703,8 +2868,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (rpoaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("E0 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2727,8 +2892,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (ccaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("DC " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2751,8 +2916,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (cncaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("D4 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2775,8 +2940,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (cpaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("F4 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2799,8 +2964,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (cmaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("FC " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2823,8 +2988,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (czaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("CC " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2847,8 +3012,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (cnzaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("C4 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2871,8 +3036,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (cpeaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("EC " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2895,8 +3060,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     correctFormatInstruction = true;
                                 } else if (cpoaddr) {
                                     instructionsCount++;
+                                    addressTxtArea.append(Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                     address += 3;
-                                    addressTxtArea.append(Integer.toHexString(address - 2).toUpperCase() + ", " + Integer.toHexString(address - 1).toUpperCase() + ", " + Integer.toHexString(address).toUpperCase() + "\n");
                                     hexTxtArea.append("E4 " + instructionsArray.get(i + 1).substring(2, 4) + " " + instructionsArray.get(i + 1).substring(0, 2) + "\n");
                                 } else {
                                     instructionsCount++;
@@ -2912,8 +3077,8 @@ public class AssemToHex extends javax.swing.JFrame {
                             default:
                                 i--;
                                 instructionsCount++;
-                                address++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
+                                address += 1;
                                 hexTxtArea.append("Unknown Instruction!\n");
                                 correctFormatInstruction = true;
                         }
