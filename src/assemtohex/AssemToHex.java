@@ -429,7 +429,11 @@ public class AssemToHex extends javax.swing.JFrame {
                     instructionsArray.addAll(Arrays.asList(assemTxtArea.getText().split("\\s+")));
                     boolean correctFormatInstruction;
                     int instructionsCount = 0;
-                    for (int i = 0; i < instructionsArray.size(); i += 2) {
+                    int i = 0;
+                    boolean increment;
+                    while (i < instructionsArray.size()) {
+                        increment = true;
+                        System.out.println(i);
                         correctFormatInstruction = false;
                         switch (instructionsArray.get(i)) {
                             case "MOV":
@@ -437,7 +441,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append(" 40\n");
                                     correctFormatInstruction = true;
                                 }
@@ -445,7 +448,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("41\n");
                                     correctFormatInstruction = true;
                                 }
@@ -453,7 +455,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("42\n");
                                     correctFormatInstruction = true;
                                 }
@@ -461,7 +462,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("43\n");
                                     correctFormatInstruction = true;
                                 }
@@ -469,7 +469,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("44\n");
                                     correctFormatInstruction = true;
                                 }
@@ -477,7 +476,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("45\n");
                                     correctFormatInstruction = true;
                                 }
@@ -485,7 +483,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("46\n");
                                     correctFormatInstruction = true;
                                 }
@@ -493,7 +490,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("47\n");
                                     correctFormatInstruction = true;
                                 }
@@ -501,7 +497,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("48\n");
                                     correctFormatInstruction = true;
                                 }
@@ -509,7 +504,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("49\n");
                                     correctFormatInstruction = true;
                                 }
@@ -517,7 +511,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("4A\n");
                                     correctFormatInstruction = true;
                                 }
@@ -525,7 +518,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("4B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -533,7 +525,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("4C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -541,7 +532,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("4D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -549,7 +539,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("4E\n");
                                     correctFormatInstruction = true;
                                 }
@@ -557,7 +546,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("4F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -565,7 +553,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("50\n");
                                     correctFormatInstruction = true;
                                 }
@@ -573,7 +560,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("51\n");
                                     correctFormatInstruction = true;
                                 }
@@ -581,7 +567,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("52\n");
                                     correctFormatInstruction = true;
                                 }
@@ -589,7 +574,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("53\n");
                                     correctFormatInstruction = true;
                                 }
@@ -597,7 +581,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("54\n");
                                     correctFormatInstruction = true;
                                 }
@@ -605,7 +588,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("55\n");
                                     correctFormatInstruction = true;
                                 }
@@ -613,7 +595,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("56\n");
                                     correctFormatInstruction = true;
                                 }
@@ -621,7 +602,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("57\n");
                                     correctFormatInstruction = true;
                                 }
@@ -629,7 +609,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("58\n");
                                     correctFormatInstruction = true;
                                 }
@@ -637,7 +616,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("59\n");
                                     correctFormatInstruction = true;
                                 }
@@ -645,7 +623,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("5A\n");
                                     correctFormatInstruction = true;
                                 }
@@ -653,7 +630,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("5B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -661,7 +637,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("5C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -669,7 +644,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("5D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -677,7 +651,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("5E\n");
                                     correctFormatInstruction = true;
                                 }
@@ -685,7 +658,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("5F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -693,7 +665,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("60\n");
                                     correctFormatInstruction = true;
                                 }
@@ -701,7 +672,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("61\n");
                                     correctFormatInstruction = true;
                                 }
@@ -709,7 +679,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("62\n");
                                     correctFormatInstruction = true;
                                 }
@@ -717,7 +686,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("63\n");
                                     correctFormatInstruction = true;
                                 }
@@ -725,7 +693,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("64\n");
                                     correctFormatInstruction = true;
                                 }
@@ -733,7 +700,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("65\n");
                                     correctFormatInstruction = true;
                                 }
@@ -741,7 +707,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("66\n");
                                     correctFormatInstruction = true;
                                 }
@@ -749,7 +714,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("67\n");
                                     correctFormatInstruction = true;
                                 }
@@ -757,7 +721,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("68\n");
                                     correctFormatInstruction = true;
                                 }
@@ -765,7 +728,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("69\n");
                                     correctFormatInstruction = true;
                                 }
@@ -773,7 +735,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("6A\n");
                                     correctFormatInstruction = true;
                                 }
@@ -781,7 +742,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("6B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -789,7 +749,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("6C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -797,7 +756,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("6D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -805,7 +763,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("6E\n");
                                     correctFormatInstruction = true;
                                 }
@@ -813,7 +770,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("6F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -821,7 +777,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("70\n");
                                     correctFormatInstruction = true;
                                 }
@@ -829,7 +784,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("71\n");
                                     correctFormatInstruction = true;
                                 }
@@ -837,7 +791,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("72\n");
                                     correctFormatInstruction = true;
                                 }
@@ -845,7 +798,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("73\n");
                                     correctFormatInstruction = true;
                                 }
@@ -853,7 +805,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("74\n");
                                     correctFormatInstruction = true;
                                 }
@@ -861,7 +812,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("75\n");
                                     correctFormatInstruction = true;
                                 }
@@ -869,7 +819,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("76\n");
                                     correctFormatInstruction = true;
                                 }
@@ -877,7 +826,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("77\n");
                                     correctFormatInstruction = true;
                                 }
@@ -885,7 +833,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("78\n");
                                     correctFormatInstruction = true;
                                 }
@@ -893,7 +840,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("79\n");
                                     correctFormatInstruction = true;
                                 }
@@ -901,7 +847,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("7A\n");
                                     correctFormatInstruction = true;
                                 }
@@ -909,7 +854,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("7B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -917,7 +861,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("7C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -925,7 +868,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("7D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -933,7 +875,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("7E\n");
                                     correctFormatInstruction = true;
                                 }
@@ -941,7 +882,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("7F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -952,7 +892,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("80\n");
                                     correctFormatInstruction = true;
                                 }
@@ -960,7 +899,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("81\n");
                                     correctFormatInstruction = true;
                                 }
@@ -968,7 +906,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("82\n");
                                     correctFormatInstruction = true;
                                 }
@@ -976,7 +913,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("83\n");
                                     correctFormatInstruction = true;
                                 }
@@ -984,7 +920,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("84\n");
                                     correctFormatInstruction = true;
                                 }
@@ -992,7 +927,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("85\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1000,7 +934,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("86\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1008,7 +941,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("87\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1020,7 +952,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("88\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1028,7 +959,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("89\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1036,7 +966,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("8A\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1044,7 +973,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("8B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1052,7 +980,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("8C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1060,7 +987,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("8D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1068,7 +994,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("8E\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1076,7 +1001,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("8F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1088,7 +1012,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("90\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1096,7 +1019,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("91\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1104,7 +1026,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("92\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1112,7 +1033,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("93\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1120,7 +1040,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("94\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1128,7 +1047,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("95\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1136,7 +1054,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("96\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1144,7 +1061,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("97\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1156,7 +1072,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("98\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1164,7 +1079,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("99\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1172,7 +1086,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("9A\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1180,7 +1093,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("9B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1188,7 +1100,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("9C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1196,7 +1107,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("9D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1204,7 +1114,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("9E\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1212,7 +1121,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("9F\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1224,7 +1132,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("03\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1232,7 +1139,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("13\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1240,7 +1146,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("23\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1248,7 +1153,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("33\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1260,7 +1164,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("C5\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1268,7 +1171,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("D5\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1276,7 +1178,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("E5\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1284,7 +1185,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("F5\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1296,7 +1196,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("C1\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1304,7 +1203,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("D1\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1312,7 +1210,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("E1\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1320,7 +1217,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("F1\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1332,7 +1228,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("0B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1340,7 +1235,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("1B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1348,7 +1242,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("2B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1356,7 +1249,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("3B\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1368,7 +1260,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("02\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1376,7 +1267,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("12\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1388,7 +1278,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("0A\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1396,7 +1285,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("1A\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1408,7 +1296,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("A0\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1416,7 +1303,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("A1\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1424,7 +1310,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("A2\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1432,7 +1317,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("A3\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1440,7 +1324,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("A4\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1448,7 +1331,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("A5\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1456,7 +1338,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("A6\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1464,7 +1345,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("A7\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1476,7 +1356,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("A8\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1484,7 +1363,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("A9\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1492,7 +1370,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("AA\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1500,7 +1377,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("AB\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1508,7 +1384,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("AC\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1516,7 +1391,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("AD\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1524,7 +1398,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("AE\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1532,7 +1405,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("AF\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1544,7 +1416,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("B0\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1552,7 +1423,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("B1\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1560,7 +1430,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("B2\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1568,7 +1437,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("B3\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1576,7 +1444,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("B4\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1584,7 +1451,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("B5\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1592,7 +1458,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("B6\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1600,7 +1465,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("B7\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1612,7 +1476,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("B8\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1620,7 +1483,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("B9\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1628,7 +1490,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("BA\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1636,7 +1497,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("BB\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1644,7 +1504,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("BC\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1652,7 +1511,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("BD\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1660,7 +1518,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("BE\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1668,7 +1525,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("BF\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1680,7 +1536,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("04\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1688,7 +1543,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("0C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1696,7 +1550,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("14\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1704,7 +1557,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("1C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1712,7 +1564,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("24\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1720,7 +1571,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("2C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1728,7 +1578,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("34\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1736,7 +1585,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("3C\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1748,7 +1596,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("05\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1756,7 +1603,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("0D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1764,7 +1610,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("15\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1772,7 +1617,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("1D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1780,7 +1624,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("25\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1788,7 +1631,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("2D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1796,7 +1638,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("35\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1804,7 +1645,6 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                     address += 1;
-
                                     hexTxtArea.append("3D\n");
                                     correctFormatInstruction = true;
                                 }
@@ -1817,7 +1657,8 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
-                                    hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
+                                    increment = false;
+                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (rstaaddr) {
 
@@ -1881,6 +1722,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                     rstaaddr = true;
@@ -1894,6 +1736,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (lxiaddr) {
@@ -1930,6 +1773,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                     lxiaddr = true;
@@ -1942,6 +1786,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (mvidata) {
@@ -2005,6 +1850,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                     mvidata = true;
@@ -2215,6 +2061,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (staaddr) {
@@ -2226,6 +2073,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     staaddr = true;
                                 }
@@ -2239,6 +2087,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (adidata) {
@@ -2250,6 +2099,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     adidata = true;
                                 }
@@ -2263,6 +2113,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (anidata) {
@@ -2274,6 +2125,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     anidata = true;
                                 }
@@ -2287,6 +2139,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (acidata) {
@@ -2298,6 +2151,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     acidata = true;
                                 }
@@ -2311,6 +2165,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (suidata) {
@@ -2322,6 +2177,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     suidata = true;
                                 }
@@ -2335,6 +2191,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (sbidata) {
@@ -2346,6 +2203,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     sbidata = true;
                                 }
@@ -2359,6 +2217,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (cpidata) {
@@ -2370,6 +2229,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     cpidata = true;
                                 }
@@ -2383,6 +2243,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (oridata) {
@@ -2394,6 +2255,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     oridata = true;
                                 }
@@ -2407,6 +2269,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (xridata) {
@@ -2418,6 +2281,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     xridata = true;
                                 }
@@ -2431,6 +2295,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (ldaaddr) {
@@ -2442,6 +2307,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     ldaaddr = true;
                                 }
@@ -2455,6 +2321,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (jncaddr) {
@@ -2466,6 +2333,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     jncaddr = true;
                                 }
@@ -2479,6 +2347,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (jnzaddr) {
@@ -2490,6 +2359,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     jnzaddr = true;
                                 }
@@ -2503,6 +2373,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (jzaddr) {
@@ -2514,6 +2385,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     jzaddr = true;
                                 }
@@ -2527,6 +2399,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (jcaddr) {
@@ -2538,6 +2411,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     jcaddr = true;
                                 }
@@ -2551,6 +2425,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (jpoaddr) {
@@ -2562,6 +2437,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     jpoaddr = true;
                                 }
@@ -2575,6 +2451,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (jpeaddr) {
@@ -2586,6 +2463,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     jpeaddr = true;
                                 }
@@ -2599,6 +2477,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (jpaddr) {
@@ -2610,6 +2489,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     jpaddr = true;
                                 }
@@ -2623,6 +2503,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (jmpaddr) {
@@ -2634,6 +2515,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     jmpaddr = true;
                                 }
@@ -2647,6 +2529,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (lhldaddr) {
@@ -2658,6 +2541,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     lhldaddr = true;
                                 }
@@ -2671,6 +2555,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (shldaddr) {
@@ -2682,6 +2567,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     shldaddr = true;
                                 }
@@ -2695,6 +2581,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (rcaddr) {
@@ -2707,6 +2594,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     rcaddr = true;
                                 }
@@ -2720,6 +2608,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (rncaddr) {
@@ -2731,6 +2620,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     rncaddr = true;
                                 }
@@ -2744,6 +2634,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (rpaddr) {
@@ -2755,6 +2646,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     rpaddr = true;
                                 }
@@ -2768,6 +2660,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (rmaddr) {
@@ -2779,6 +2672,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     rmaddr = true;
                                 }
@@ -2792,6 +2686,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (rzaddr) {
@@ -2803,6 +2698,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     rzaddr = true;
                                 }
@@ -2816,6 +2712,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (rnzaddr) {
@@ -2827,6 +2724,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     rnzaddr = true;
                                 }
@@ -2840,6 +2738,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (rpeaddr) {
@@ -2851,6 +2750,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     rpeaddr = true;
                                 }
@@ -2864,6 +2764,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (rpoaddr) {
@@ -2875,6 +2776,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     rpoaddr = true;
                                 }
@@ -2888,6 +2790,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (ccaddr) {
@@ -2899,6 +2802,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     ccaddr = true;
                                 }
@@ -2912,6 +2816,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (cncaddr) {
@@ -2923,6 +2828,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     cncaddr = true;
                                 }
@@ -2936,6 +2842,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (cpaddr) {
@@ -2947,6 +2854,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     cpaddr = true;
                                 }
@@ -2960,6 +2868,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (cmaddr) {
@@ -2971,6 +2880,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     cmaddr = true;
                                 }
@@ -2984,6 +2894,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (czaddr) {
@@ -2995,6 +2906,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     czaddr = true;
                                 }
@@ -3008,6 +2920,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (cnzaddr) {
@@ -3019,6 +2932,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     cnzaddr = true;
                                 }
@@ -3032,6 +2946,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (cpeaddr) {
@@ -3043,6 +2958,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     cpeaddr = true;
                                 }
@@ -3056,6 +2972,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (cpoaddr) {
@@ -3067,6 +2984,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     instructionsCount++;
                                     address += 3;
                                     addressTxtArea.append("\n");
+                                    increment = false;
                                     hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     cpoaddr = true;
                                 }
@@ -3087,6 +3005,11 @@ public class AssemToHex extends javax.swing.JFrame {
                             address++;
                             addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + "\n");
                             hexTxtArea.append("Instruction Format is wrong!\n");
+                        }
+                        if (increment) {
+                            i += 2;
+                        } else {
+                            i += 1;
                         }
                     }
                     insCount.setText("No. of Instructions :" + instructionsCount);
