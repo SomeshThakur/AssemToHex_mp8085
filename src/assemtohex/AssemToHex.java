@@ -427,13 +427,18 @@ public class AssemToHex extends javax.swing.JFrame {
                     addressTxtArea.setText(null);
                     ArrayList<String> instructionsArray = new ArrayList();
                     instructionsArray.addAll(Arrays.asList(assemTxtArea.getText().split("\\s+")));
+                    String tmp = assemTxtArea.getText();
+                    if (tmp.isEmpty() || tmp.trim().length() <= 0) {
+                        JOptionPane.showMessageDialog(null, "Duh! Enter any instruction(s) to convert");
+                        return;
+
+                    }
                     boolean correctFormatInstruction;
                     int instructionsCount = 0;
                     int i = 0;
                     boolean increment;
                     while (i < instructionsArray.size()) {
                         increment = true;
-                        System.out.println(i);
                         correctFormatInstruction = false;
                         switch (instructionsArray.get(i)) {
                             case "MOV":
