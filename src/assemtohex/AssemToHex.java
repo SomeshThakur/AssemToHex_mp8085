@@ -453,7 +453,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                             instructionsCount++;
                                             addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                             address += 1;
-                                            hexTxtArea.append(" 40\n");
+                                            hexTxtArea.append("40\n");
                                             correctFormatInstruction = true;
                                             break;
                                         case "B,C":
@@ -3096,8 +3096,8 @@ public class AssemToHex extends javax.swing.JFrame {
                         }
                         if (!correctFormatInstruction) {
                             instructionsCount++;
+                            addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                             address++;
-                            addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + "\n");
                             hexTxtArea.append("Instruction Format is wrong!\n");
                         }
                     }
