@@ -7,7 +7,6 @@ package assemtohex;
 
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.logging.Level;
@@ -374,13 +373,13 @@ public class AssemToHex extends javax.swing.JFrame {
                 if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-                    
+
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(AssemToHex.class
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            
+
         }
         //</editor-fold>
 
@@ -426,13 +425,13 @@ public class AssemToHex extends javax.swing.JFrame {
                     int address = Integer.parseInt(startingAddress.getText(), 16);
                     hexTxtArea.setText(null);
                     addressTxtArea.setText(null);
-                    ArrayList<String> instructionsArray = new ArrayList();
+                    LinkedList<String> instructionsArray = new LinkedList();
                     instructionsArray.addAll(Arrays.asList(assemTxtArea.getText().split("\\n+")));
                     String tmp = assemTxtArea.getText(), operator, operand;
                     if (tmp.isEmpty() || tmp.trim().length() <= 0) {
                         JOptionPane.showMessageDialog(null, "Duh! Enter any instruction(s) to convert");
                         return;
-                        
+
                     }
                     boolean correctFormatInstruction;
                     int instructionsCount = 0;
@@ -903,7 +902,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     }
                                 }
                                 break;
-                            
+
                             case "ADD":
                                 if (null != operand) {
                                     switch (operand) {
@@ -967,9 +966,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "ADC":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1033,9 +1032,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "SUB":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1099,9 +1098,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "SBB":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1165,9 +1164,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "INX":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1203,9 +1202,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "PUSH":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1241,9 +1240,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "POP":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1279,9 +1278,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "DCX":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1317,9 +1316,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "STAX":
                                 if ("B".equals(operand)) {
                                     instructionsCount++;
@@ -1334,9 +1333,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     hexTxtArea.append("12\n");
                                     correctFormatInstruction = true;
                                 }
-                                
+
                                 break;
-                            
+
                             case "LDAX":
                                 if ("B".equals(operand)) {
                                     instructionsCount++;
@@ -1351,9 +1350,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     hexTxtArea.append("1A\n");
                                     correctFormatInstruction = true;
                                 }
-                                
+
                                 break;
-                            
+
                             case "ANA":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1417,9 +1416,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "XRA":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1483,9 +1482,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "ORA":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1549,9 +1548,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "CMP":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1615,9 +1614,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "INR":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1681,9 +1680,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "DCR":
                                 if (null != operand) {
                                     switch (operand) {
@@ -1747,9 +1746,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                             break;
                                     }
                                 }
-                                
+
                                 break;
-                            
+
                             case "RST":
                                 boolean rstaaddr = Pattern.matches("\\d*", operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -1760,7 +1759,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (rstaaddr) {
-                                    
+
                                     if (null != operand) {
                                         switch (operand) {
                                             case "0":
@@ -1834,7 +1833,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 }
                                 i++;
                                 break;
-                            
+
                             case "LXI":
                                 boolean lxiaddr = Pattern.matches("\\d*", operand.substring(2, operand.length() - 1));
                                 if ((operand.length() <= 6 && operand.endsWith("H")) || operand.endsWith("H") && operand.length() >= 8 || (!operand.endsWith("H")) && operand.length() > 6 || (!operand.endsWith("H")) && operand.length() < 6) {
@@ -1847,7 +1846,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 } else if (lxiaddr) {
                                     if (operand.startsWith("B,")) {
                                         instructionsCount++;
-                                        
+
                                         addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
                                         hexTxtArea.append("01 " + operand.substring(4, 6) + " " + operand.substring(2, 4) + "\n");
                                         correctFormatInstruction = true;
@@ -1881,7 +1880,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     lxiaddr = true;
                                 }
                                 break;
-                            
+
                             case "MVI":
                                 boolean mvidata = Pattern.matches("\\d*", operand.substring(2, operand.length() - 1));
                                 if (operand.endsWith("H") && operand.length() > 5 || (!operand.endsWith("H")) && operand.length() > 4 || operand.length() < 4) {
@@ -1951,7 +1950,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                     mvidata = true;
                                 }
                                 break;
-                            
+
                             case "HLT":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -1959,9 +1958,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("CF/EF (Depends on kit VI/ESA)\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "NOP":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -1969,9 +1968,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("00\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "CMA":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -1979,9 +1978,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("2F\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "CMC":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -1989,9 +1988,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("3F\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "STC":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -1999,9 +1998,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("37\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "RAR":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2009,9 +2008,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("1F\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "RRC":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2019,9 +2018,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("0F\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "RLC":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2029,9 +2028,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("07\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "RAL":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2039,9 +2038,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("17\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "DAA":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2049,9 +2048,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("27\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "RET":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2059,9 +2058,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("C9\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "SPHL":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2069,9 +2068,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("F9\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "XTHL":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2079,9 +2078,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("E3\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "XCHG":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2089,9 +2088,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("EB\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "RIM":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2099,9 +2098,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("20\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "SIM":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2109,9 +2108,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("30\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "EI":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2119,9 +2118,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("FB\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "DI":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
@@ -2129,27 +2128,27 @@ public class AssemToHex extends javax.swing.JFrame {
                                 hexTxtArea.append("F3\n");
                                 correctFormatInstruction = true;
                                 i--;
-                                
+
                                 break;
-                            
+
                             case "OUT":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                 address += 1;
                                 hexTxtArea.append("D3 " + operand.substring(0, 2) + "\n");
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "IN":
                                 instructionsCount++;
                                 addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
                                 address += 1;
                                 hexTxtArea.append("DB " + operand.substring(0, 2) + "\n");
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "STA":
                                 boolean staaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2173,9 +2172,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     staaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "ADI":
                                 boolean adidata = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 3 || operand.endsWith("H") && operand.length() < 3 || (!operand.endsWith("H")) && operand.length() > 2 || (!operand.endsWith("H")) && operand.length() < 2) {
@@ -2199,9 +2198,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     adidata = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "ANI":
                                 boolean anidata = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 3 || operand.endsWith("H") && operand.length() < 3 || (!operand.endsWith("H")) && operand.length() > 2 || (!operand.endsWith("H")) && operand.length() < 2) {
@@ -2225,9 +2224,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     anidata = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "ACI":
                                 boolean acidata = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 3 || operand.endsWith("H") && operand.length() < 3 || (!operand.endsWith("H")) && operand.length() > 2 || (!operand.endsWith("H")) && operand.length() < 2) {
@@ -2251,9 +2250,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     acidata = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "SUI":
                                 boolean suidata = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 3 || operand.endsWith("H") && operand.length() < 3 || (!operand.endsWith("H")) && operand.length() > 2 || (!operand.endsWith("H")) && operand.length() < 2) {
@@ -2277,9 +2276,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     suidata = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "SBI":
                                 boolean sbidata = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 3 || operand.endsWith("H") && operand.length() < 3 || (!operand.endsWith("H")) && operand.length() > 2 || (!operand.endsWith("H")) && operand.length() < 2) {
@@ -2303,9 +2302,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     sbidata = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "CPI":
                                 boolean cpidata = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 3 || operand.endsWith("H") && operand.length() < 3 || (!operand.endsWith("H")) && operand.length() > 2 || (!operand.endsWith("H")) && operand.length() < 2) {
@@ -2329,9 +2328,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     cpidata = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "ORI":
                                 boolean oridata = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 3 || operand.endsWith("H") && operand.length() < 3 || (!operand.endsWith("H")) && operand.length() > 2 || (!operand.endsWith("H")) && operand.length() < 2) {
@@ -2355,9 +2354,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     oridata = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "XRI":
                                 boolean xridata = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 3 || operand.endsWith("H") && operand.length() < 3 || (!operand.endsWith("H")) && operand.length() > 2 || (!operand.endsWith("H")) && operand.length() < 2) {
@@ -2381,9 +2380,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     xridata = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "LDA":
                                 boolean ldaaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2407,9 +2406,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     ldaaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "JNC":
                                 boolean jncaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2433,9 +2432,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     jncaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "JNZ":
                                 boolean jnzaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2459,9 +2458,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     jnzaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "JZ":
                                 boolean jzaddr = Pattern.matches("\\d+", operand.substring(0, operand.length() - 1));
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2485,9 +2484,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     jzaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "JC":
                                 boolean jcaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2511,9 +2510,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     jcaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "JPO":
                                 boolean jpoaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2537,9 +2536,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     jpoaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "JPE":
                                 boolean jpeaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2563,9 +2562,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     jpeaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "JP":
                                 boolean jpaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2589,9 +2588,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     jpaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "JMP":
                                 boolean jmpaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2615,9 +2614,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     jmpaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "LHLD":
                                 boolean lhldaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2641,9 +2640,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     lhldaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "SHLD":
                                 boolean shldaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2667,9 +2666,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     shldaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "RC":
                                 boolean rcaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2694,9 +2693,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     rcaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "RNC":
                                 boolean rncaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2720,9 +2719,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     rncaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "RP":
                                 boolean rpaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2746,9 +2745,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     rpaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "RM":
                                 boolean rmaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2772,9 +2771,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     rmaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "RZ":
                                 boolean rzaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2798,9 +2797,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     rzaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "RNZ":
                                 boolean rnzaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2824,9 +2823,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     rnzaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "RPE":
                                 boolean rpeaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2850,9 +2849,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     rpeaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "RPO":
                                 boolean rpoaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2876,9 +2875,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     rpoaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "CC":
                                 boolean ccaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2902,9 +2901,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     ccaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "CNC":
                                 boolean cncaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2928,9 +2927,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     cncaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "CP":
                                 boolean cpaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2954,9 +2953,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     cpaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "CM":
                                 boolean cmaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -2980,9 +2979,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     cmaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "CZ":
                                 boolean czaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -3006,9 +3005,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     czaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "CNZ":
                                 boolean cnzaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -3032,9 +3031,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     cnzaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "CPE":
                                 boolean cpeaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -3058,9 +3057,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     cpeaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             case "CPO":
                                 boolean cpoaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
@@ -3084,9 +3083,9 @@ public class AssemToHex extends javax.swing.JFrame {
                                     cpoaddr = true;
                                 }
                                 correctFormatInstruction = true;
-                                
+
                                 break;
-                            
+
                             default:
                                 i--;
                                 instructionsCount++;
@@ -3107,14 +3106,14 @@ public class AssemToHex extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Enter a Valid Starting address (HEX)!", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
-            
+
             private boolean checkOperandHexVal(String operand) {
                 try {
                     if (!operand.endsWith("H")) {
                         Integer.parseInt(operand, 16);
                     } else {
                         Integer.parseInt(operand.substring(0, operand.length() - 1), 16);
-                    }                    
+                    }
                     return true;
                 } catch (NumberFormatException e) {
                     return false;
