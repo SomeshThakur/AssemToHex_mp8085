@@ -11,7 +11,6 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.regex.Pattern;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.text.BadLocationException;
@@ -1750,73 +1749,73 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "RST":
-                                boolean rstaaddr = Pattern.matches("\\d*", operand);
-                                if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() <= 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
+                                boolean rstaaddr = checkOperandHexVal(operand.substring(2));
+                                if (operand.endsWith("H") && operand.length() > 7 || operand.endsWith("H") && operand.length() <= 6 || (!operand.endsWith("H")) && operand.length() > 6 || (!operand.endsWith("H")) && operand.length() <= 5) {
                                     instructionsCount++;
                                     address++;
                                     addressTxtArea.append("\n");
                                     increment = false;
-                                    hexTxtArea.append("Invalid Data at instruction " + instructionsCount + "\n");
+                                    hexTxtArea.append("Invalid Address at instruction " + instructionsCount + "\n");
                                     correctFormatInstruction = true;
                                 } else if (rstaaddr) {
 
                                     if (null != operand) {
-                                        switch (operand) {
-                                            case "0":
+                                        switch (operand.charAt(0)) {
+                                            case '0':
                                                 instructionsCount++;
-                                                address++;
-                                                addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
-                                                hexTxtArea.append("C7 " + operand.substring(2, 4) + " " + operand.substring(0, 2) + "\n");
+                                                addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
+                                                hexTxtArea.append("C7 " + operand.substring(4, 6) + " " + operand.substring(2, 4) + "\n");
                                                 correctFormatInstruction = true;
+                                                address += 3;
                                                 break;
-                                            case "1":
+                                            case '1':
                                                 instructionsCount++;
-                                                address++;
-                                                addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
-                                                hexTxtArea.append("CF " + operand.substring(2, 4) + " " + operand.substring(0, 2) + "\n");
+                                                addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
+                                                hexTxtArea.append("CF " + operand.substring(4, 6) + " " + operand.substring(2, 4) + "\n");
                                                 correctFormatInstruction = true;
+                                                address += 3;
                                                 break;
-                                            case "2":
+                                            case '2':
                                                 instructionsCount++;
-                                                address++;
-                                                addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
-                                                hexTxtArea.append("D7 " + operand.substring(2, 4) + " " + operand.substring(0, 2) + "\n");
+                                                addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
+                                                hexTxtArea.append("D7 " + operand.substring(4, 6) + " " + operand.substring(2, 4) + "\n");
                                                 correctFormatInstruction = true;
+                                                address += 3;
                                                 break;
-                                            case "3":
+                                            case '3':
                                                 instructionsCount++;
-                                                address++;
-                                                addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
-                                                hexTxtArea.append("DF " + operand.substring(2, 4) + " " + operand.substring(0, 2) + "\n");
+                                                addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
+                                                hexTxtArea.append("DF " + operand.substring(4, 6) + " " + operand.substring(2, 4) + "\n");
                                                 correctFormatInstruction = true;
+                                                address += 3;
                                                 break;
-                                            case "4":
+                                            case '4':
                                                 instructionsCount++;
-                                                address++;
-                                                addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
-                                                hexTxtArea.append("E7 " + operand.substring(2, 4) + " " + operand.substring(0, 2) + "\n");
+                                                addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
+                                                hexTxtArea.append("E7 " + operand.substring(4, 6) + " " + operand.substring(2, 4) + "\n");
                                                 correctFormatInstruction = true;
+                                                address += 3;
                                                 break;
-                                            case "5":
+                                            case '5':
                                                 instructionsCount++;
-                                                address++;
-                                                addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
-                                                hexTxtArea.append("EF " + operand.substring(2, 4) + " " + operand.substring(0, 2) + "\n");
+                                                addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
+                                                hexTxtArea.append("EF " + operand.substring(4, 6) + " " + operand.substring(2, 4) + "\n");
                                                 correctFormatInstruction = true;
+                                                address += 3;
                                                 break;
-                                            case "6":
+                                            case '6':
                                                 instructionsCount++;
-                                                address++;
-                                                addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
-                                                hexTxtArea.append("F7 " + operand.substring(2, 4) + " " + operand.substring(0, 2) + "\n");
+                                                addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
+                                                hexTxtArea.append("F7 " + operand.substring(4, 6) + " " + operand.substring(2, 4) + "\n");
                                                 correctFormatInstruction = true;
+                                                address += 3;
                                                 break;
-                                            case "7":
+                                            case '7':
                                                 instructionsCount++;
-                                                address++;
-                                                addressTxtArea.append(Integer.toHexString(address).toUpperCase() + "\n");
-                                                hexTxtArea.append("FF " + operand.substring(2, 4) + " " + operand.substring(0, 2) + "\n");
+                                                addressTxtArea.append("" + Integer.toHexString(address).toUpperCase() + ", " + Integer.toHexString(address + 1).toUpperCase() + ", " + Integer.toHexString(address + 2).toUpperCase() + "\n");
+                                                hexTxtArea.append("FF " + operand.substring(4, 6) + " " + operand.substring(2, 4) + "\n");
                                                 correctFormatInstruction = true;
+                                                address += 3;
                                                 break;
                                             default:
                                                 break;
@@ -1835,7 +1834,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "LXI":
-                                boolean lxiaddr = Pattern.matches("\\d*", operand.substring(2, operand.length() - 1));
+                                boolean lxiaddr = checkOperandHexVal(operand.substring(2));
                                 if ((operand.length() <= 6 && operand.endsWith("H")) || operand.endsWith("H") && operand.length() >= 8 || (!operand.endsWith("H")) && operand.length() > 6 || (!operand.endsWith("H")) && operand.length() < 6) {
                                     instructionsCount++;
                                     address += 3;
@@ -1882,7 +1881,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "MVI":
-                                boolean mvidata = Pattern.matches("\\d*", operand.substring(2, operand.length() - 1));
+                                boolean mvidata = checkOperandHexVal(operand.substring(2));
                                 if (operand.endsWith("H") && operand.length() > 5 || (!operand.endsWith("H")) && operand.length() > 4 || operand.length() < 4) {
                                     instructionsCount++;
                                     address++;
@@ -2462,7 +2461,7 @@ public class AssemToHex extends javax.swing.JFrame {
                                 break;
 
                             case "JZ":
-                                boolean jzaddr = Pattern.matches("\\d+", operand.substring(0, operand.length() - 1));
+                                boolean jzaddr = checkOperandHexVal(operand);
                                 if (operand.endsWith("H") && operand.length() > 5 || operand.endsWith("H") && operand.length() < 4 || (!operand.endsWith("H")) && operand.length() >= 5 || (!operand.endsWith("H")) && operand.length() < 4) {
                                     instructionsCount++;
                                     address += 3;
